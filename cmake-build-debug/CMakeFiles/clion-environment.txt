@@ -1,0 +1,4 @@
+ToolSet: 6.0 w64 (local)@D:\Qt\Qt5.14.2\Tools\mingw730_64
+Options: 
+
+Options:-DCMAKE_MAKE_PROGRAM=D:/Qt/Qt5.14.2/Tools/mingw730_64/bin/mingw32-make.exe

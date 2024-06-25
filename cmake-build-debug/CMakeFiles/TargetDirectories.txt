@@ -1,0 +1,4 @@
+D:/programing/CLionProjects/Turing Machine/cmake-build-debug/CMakeFiles/Turing_Machine.dir
+D:/programing/CLionProjects/Turing Machine/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/programing/CLionProjects/Turing Machine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/programing/CLionProjects/Turing Machine/cmake-build-debug/CMakeFiles/Turing_Machine_autogen.dir
