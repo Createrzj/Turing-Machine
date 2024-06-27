@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/main.cpp" "CMakeFiles/Turing_Machine.dir/main.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/main.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/BinarySearch.cpp" "CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp" "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/turing.cpp" "CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

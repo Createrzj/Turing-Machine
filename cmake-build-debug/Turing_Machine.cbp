@@ -110,10 +110,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui_turing.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/BinarySearch.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Library.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/QuickSort.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/turing.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/main.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/BinarySearch.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/turing.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/turing.ui">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/CMakeLists.txt">
