@@ -189,6 +189,78 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/BinarySearch.obj: src/BinarySearch.cpp.obj
+.PHONY : src/BinarySearch.obj
+
+# target to build an object file
+src/BinarySearch.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj
+.PHONY : src/BinarySearch.cpp.obj
+
+src/BinarySearch.i: src/BinarySearch.cpp.i
+.PHONY : src/BinarySearch.i
+
+# target to preprocess a source file
+src/BinarySearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.i
+.PHONY : src/BinarySearch.cpp.i
+
+src/BinarySearch.s: src/BinarySearch.cpp.s
+.PHONY : src/BinarySearch.s
+
+# target to generate assembly for a file
+src/BinarySearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.s
+.PHONY : src/BinarySearch.cpp.s
+
+src/QuickSort.obj: src/QuickSort.cpp.obj
+.PHONY : src/QuickSort.obj
+
+# target to build an object file
+src/QuickSort.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj
+.PHONY : src/QuickSort.cpp.obj
+
+src/QuickSort.i: src/QuickSort.cpp.i
+.PHONY : src/QuickSort.i
+
+# target to preprocess a source file
+src/QuickSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.i
+.PHONY : src/QuickSort.cpp.i
+
+src/QuickSort.s: src/QuickSort.cpp.s
+.PHONY : src/QuickSort.s
+
+# target to generate assembly for a file
+src/QuickSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s
+.PHONY : src/QuickSort.cpp.s
+
+src/turing.obj: src/turing.cpp.obj
+.PHONY : src/turing.obj
+
+# target to build an object file
+src/turing.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj
+.PHONY : src/turing.cpp.obj
+
+src/turing.i: src/turing.cpp.i
+.PHONY : src/turing.i
+
+# target to preprocess a source file
+src/turing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/turing.cpp.i
+.PHONY : src/turing.cpp.i
+
+src/turing.s: src/turing.cpp.s
+.PHONY : src/turing.s
+
+# target to generate assembly for a file
+src/turing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/turing.cpp.s
+.PHONY : src/turing.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -205,6 +277,15 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/BinarySearch.obj
+	@echo ... src/BinarySearch.i
+	@echo ... src/BinarySearch.s
+	@echo ... src/QuickSort.obj
+	@echo ... src/QuickSort.i
+	@echo ... src/QuickSort.s
+	@echo ... src/turing.obj
+	@echo ... src/turing.i
+	@echo ... src/turing.s
 .PHONY : help
 
 

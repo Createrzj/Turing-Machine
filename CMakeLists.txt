@@ -14,7 +14,18 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Turing_Machine main.cpp)
+add_executable(Turing_Machine main.cpp
+        src/turing.cpp
+        include/turing.h
+        turing.ui
+        src/BinarySearch.cpp
+        include/BinarySearch.h
+        include/BinarySearch.h
+        src/QuickSort.cpp
+        include/QuickSort.h
+        include/Library.h
+        include/Library.h
+)
 target_link_libraries(Turing_Machine
         Qt5::Core
         Qt5::Gui
@@ -23,9 +34,6 @@ target_link_libraries(Turing_Machine
 
 if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
     set(DEBUG_SUFFIX)
-    if (MSVC AND CMAKE_BUILD_TYPE MATCHES "Debug")
-        set(DEBUG_SUFFIX "d")
-    endif ()
     set(QT_INSTALL_PATH "${CMAKE_PREFIX_PATH}")
     if (NOT EXISTS "${QT_INSTALL_PATH}/bin")
         set(QT_INSTALL_PATH "${QT_INSTALL_PATH}/..")
@@ -43,9 +51,5 @@ if (WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
                 "$<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins/platforms/")
     endif ()
     foreach (QT_LIB Core Gui Widgets)
-        add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-                COMMAND ${CMAKE_COMMAND} -E copy
-                "${QT_INSTALL_PATH}/bin/Qt5${QT_LIB}${DEBUG_SUFFIX}.dll"
-                "$<TARGET_FILE_DIR:${PROJECT_NAME}>")
     endforeach (QT_LIB)
 endif ()

@@ -98,16 +98,67 @@ CMakeFiles/Turing_Machine.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/main.cpp.s"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\main.cpp" -o CMakeFiles\Turing_Machine.dir\main.cpp.s
 
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/turing.cpp
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\turing.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\turing.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\turing.cpp"
+
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/src/turing.cpp.i"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\src\turing.cpp" > CMakeFiles\Turing_Machine.dir\src\turing.cpp.i
+
+CMakeFiles/Turing_Machine.dir/src/turing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/turing.cpp.s"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\turing.cpp" -o CMakeFiles\Turing_Machine.dir\src\turing.cpp.s
+
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/BinarySearch.cpp
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\BinarySearch.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\BinarySearch.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\BinarySearch.cpp"
+
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.i"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\src\BinarySearch.cpp" > CMakeFiles\Turing_Machine.dir\src\BinarySearch.cpp.i
+
+CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.s"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\BinarySearch.cpp" -o CMakeFiles\Turing_Machine.dir\src\BinarySearch.cpp.s
+
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/QuickSort.cpp
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\QuickSort.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\QuickSort.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\QuickSort.cpp"
+
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.i"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\src\QuickSort.cpp" > CMakeFiles\Turing_Machine.dir\src\QuickSort.cpp.i
+
+CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\QuickSort.cpp" -o CMakeFiles\Turing_Machine.dir\src\QuickSort.cpp.s
+
 # Object files for target Turing_Machine
 Turing_Machine_OBJECTS = \
 "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/Turing_Machine.dir/main.cpp.obj"
+"CMakeFiles/Turing_Machine.dir/main.cpp.obj" \
+"CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj" \
+"CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj" \
+"CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj"
 
 # External object files for target Turing_Machine
 Turing_Machine_EXTERNAL_OBJECTS =
 
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/main.cpp.obj
+Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj
+Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj
+Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/build.make
 Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Gui.a
@@ -115,11 +166,8 @@ Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/linkLibs.rsp
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/objects1.rsp
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Turing_Machine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Turing_Machine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Turing_Machine.dir\link.txt --verbose=$(VERBOSE)
-	"D:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E copy D:/Qt/Qt5.14.2/Tools/mingw730_64/bin/Qt5Core.dll "D:/programing/CLionProjects/Turing Machine/cmake-build-debug"
-	"D:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E copy D:/Qt/Qt5.14.2/Tools/mingw730_64/bin/Qt5Gui.dll "D:/programing/CLionProjects/Turing Machine/cmake-build-debug"
-	"D:\Program Files\JetBrains\CLion 2024.1.2\bin\cmake\win\x64\bin\cmake.exe" -E copy D:/Qt/Qt5.14.2/Tools/mingw730_64/bin/Qt5Widgets.dll "D:/programing/CLionProjects/Turing Machine/cmake-build-debug"
 
 # Rule to build all files generated by this target.
 CMakeFiles/Turing_Machine.dir/build: Turing_Machine.exe
