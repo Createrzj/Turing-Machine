@@ -141,6 +141,30 @@ Turing_Machine_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine_autogen.dir\build.make CMakeFiles/Turing_Machine_autogen.dir/build
 .PHONY : Turing_Machine_autogen/fast
 
+Inter_BinarySer.obj: Inter_BinarySer.cpp.obj
+.PHONY : Inter_BinarySer.obj
+
+# target to build an object file
+Inter_BinarySer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.obj
+.PHONY : Inter_BinarySer.cpp.obj
+
+Inter_BinarySer.i: Inter_BinarySer.cpp.i
+.PHONY : Inter_BinarySer.i
+
+# target to preprocess a source file
+Inter_BinarySer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.i
+.PHONY : Inter_BinarySer.cpp.i
+
+Inter_BinarySer.s: Inter_BinarySer.cpp.s
+.PHONY : Inter_BinarySer.s
+
+# target to generate assembly for a file
+Inter_BinarySer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.s
+.PHONY : Inter_BinarySer.cpp.s
+
 Turing_Machine_autogen/mocs_compilation.obj: Turing_Machine_autogen/mocs_compilation.cpp.obj
 .PHONY : Turing_Machine_autogen/mocs_compilation.obj
 
@@ -271,6 +295,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Turing_Machine_autogen
 	@echo ... Turing_Machine
+	@echo ... Inter_BinarySer.obj
+	@echo ... Inter_BinarySer.i
+	@echo ... Inter_BinarySer.s
 	@echo ... Turing_Machine_autogen/mocs_compilation.obj
 	@echo ... Turing_Machine_autogen/mocs_compilation.i
 	@echo ... Turing_Machine_autogen/mocs_compilation.s

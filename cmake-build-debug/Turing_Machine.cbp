@@ -110,6 +110,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/Inter_BinarySer.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/Inter_BinarySer.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui_turing.h">
 			<Option target="Turing_Machine"/>
 		</Unit>

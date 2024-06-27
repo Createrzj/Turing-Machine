@@ -25,6 +25,7 @@ add_executable(Turing_Machine main.cpp
         include/QuickSort.h
         include/Library.h
         include/Library.h
+        Inter_BinarySer.cpp
 )
 target_link_libraries(Turing_Machine
         Qt5::Core
