@@ -237,6 +237,54 @@ src/QuickSort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s
 .PHONY : src/QuickSort.cpp.s
 
+src/Recur_BinarySer.obj: src/Recur_BinarySer.cpp.obj
+.PHONY : src/Recur_BinarySer.obj
+
+# target to build an object file
+src/Recur_BinarySer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj
+.PHONY : src/Recur_BinarySer.cpp.obj
+
+src/Recur_BinarySer.i: src/Recur_BinarySer.cpp.i
+.PHONY : src/Recur_BinarySer.i
+
+# target to preprocess a source file
+src/Recur_BinarySer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.i
+.PHONY : src/Recur_BinarySer.cpp.i
+
+src/Recur_BinarySer.s: src/Recur_BinarySer.cpp.s
+.PHONY : src/Recur_BinarySer.s
+
+# target to generate assembly for a file
+src/Recur_BinarySer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.s
+.PHONY : src/Recur_BinarySer.cpp.s
+
+src/Recursive.obj: src/Recursive.cpp.obj
+.PHONY : src/Recursive.obj
+
+# target to build an object file
+src/Recursive.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj
+.PHONY : src/Recursive.cpp.obj
+
+src/Recursive.i: src/Recursive.cpp.i
+.PHONY : src/Recursive.i
+
+# target to preprocess a source file
+src/Recursive.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.i
+.PHONY : src/Recursive.cpp.i
+
+src/Recursive.s: src/Recursive.cpp.s
+.PHONY : src/Recursive.s
+
+# target to generate assembly for a file
+src/Recursive.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.s
+.PHONY : src/Recursive.cpp.s
+
 src/main_interface.obj: src/main_interface.cpp.obj
 .PHONY : src/main_interface.obj
 
@@ -307,6 +355,12 @@ help:
 	@echo ... src/QuickSort.obj
 	@echo ... src/QuickSort.i
 	@echo ... src/QuickSort.s
+	@echo ... src/Recur_BinarySer.obj
+	@echo ... src/Recur_BinarySer.i
+	@echo ... src/Recur_BinarySer.s
+	@echo ... src/Recursive.obj
+	@echo ... src/Recursive.i
+	@echo ... src/Recursive.s
 	@echo ... src/main_interface.obj
 	@echo ... src/main_interface.i
 	@echo ... src/main_interface.s

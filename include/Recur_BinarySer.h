@@ -1,20 +1,17 @@
 //
-// Created by icy on 24-6-27.
+// Created by icy on 24-6-28.
 //
 
-#ifndef INTER_BINARYSER_H
-#define INTER_BINARYSER_H
+#ifndef TURING_MACHINE_RECUR_BINARYSER_H
+#define TURING_MACHINE_RECUR_BINARYSER_H
 
 #include "Library.h"
 #include "../ui_turing.h"
 
-using namespace std;
-
-
-class Inter_BinarySer {
+class Recur_BinarySer {
 public:
     Ui::Turing *ui;
-    Inter_BinarySer();
+    Recur_BinarySer();
     int execute();// 运行主函数
     void moveTape(int pos);// 移动输入纸带
     void moveWorkTape(int pos);// 移动工作纸带
@@ -23,10 +20,10 @@ public:
 
 private:
     enum State {
-        INIT_LOW, WRITE_LOW, INIT_HIGH,
-        WRITE_HIGH, COMPARE_LOW, STOP,
-        CAI_MID, UPDATE_LOW, UPDATE_HIGH,
-        READ_MID, COMPARE_MID, SUCCESS
+        READ_LOW, COMPARE_HIGH,CAI_MID,
+        READ_MID,COMPARE_MID,UPDATE_LOW,
+        UPDATE_HIGH,CALL,SUCCESS,
+        RETURN,STOP
     };
     int steps;// 运行步数
     int target;// 目标数字
@@ -38,7 +35,8 @@ private:
     QPropertyAnimation *Anima_work = new QPropertyAnimation;
     QPoint start_posWorkTape;// 工作纸带运动起始位置
     QPoint end_posWorkTape;// 工作纸带运动终止位置
+
 };
 
 
-#endif //INTER_BINARYSER_H
+#endif //TURING_MACHINE_RECUR_BINARYSER_H

@@ -128,6 +128,9 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/QuickSort.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Recur_BinarySer.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/main_interface.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
@@ -144,6 +147,12 @@
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/Recursive.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/main_interface.cpp">

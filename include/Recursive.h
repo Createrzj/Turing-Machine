@@ -54,10 +54,7 @@ public:
     int stop();
 
     void showstack();
-
-
     ~Recursive();
-
 };
 
 

@@ -101,6 +101,12 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/include/Recur_BinarySer.h",
+			"MU",
+			"6YEA5652QU/moc_Recur_BinarySer.cpp",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/include/main_interface.h",
 			"MU",
 			"6YEA5652QU/moc_main_interface.cpp",
@@ -172,6 +178,16 @@
 		],
 		[
 			"D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/Recursive.cpp",
 			"MU",
 			null
 		],
