@@ -1,6 +1,3 @@
-//
-// Created by Azure on 2024/6/25.
-//
 #include "Recursive.h"
 Recursive::Recursive() {//构造函数
     heigh = 0;
@@ -20,6 +17,10 @@ void Recursive::initwork(vector<int> input,int find) {
     if(input.size()==0) {
         cout<<"error input"<<endl;
     }else {
+        worktap.resize(1);
+        output = {-1};
+        stack<Frame> intstk;
+        work_stack.swap(intstk);
         sort(input.begin(),input.end());
         this->grid = 0;
         this->step = 0;
@@ -30,9 +31,9 @@ void Recursive::initwork(vector<int> input,int find) {
         // local[0] = low;
         // local[1] = heigh;
         inputtap.insert(inputtap.begin(),find);
-        // inputtap.insert(inputtap.begin(),heigh);
-        // inputtap.insert(inputtap.begin(),low);
-        work_stack.push({low,heigh,(low+heigh)/2});
+        inputtap.insert(inputtap.begin(),heigh);
+        inputtap.insert(inputtap.begin(),low);
+        //work_stack.push({low,heigh,(low+heigh)/2});
     }
 }
 
@@ -47,39 +48,39 @@ void Recursive::TuringStart() {
     scan();
 }
 void Recursive::scan() {
-    int state = 2;
-    while (state!=0&&!work_stack.empty()){
+    int state = 1;
+    while (state!=0){
         step++;
         switch(state) {
             case 1:
-                getstack();
+                readlow();
                 state = 2;
             break;
             case 2:
                 state = compareHeigh();
             break;
-            // case 3:
-            //     getMiddle();//用于表示进行了一步，在这没有实际作用
-            //     state = 4;
-            // break;
+            case 3:
+                getMiddle();
+                state = 4;
+            break;
             case 4:
                 findMiddle();
                 state = 5;
             break;
             case 5:
                 state = compareMiddle();
-            break;
-            case 6:
-                updateLow();
-                state = 8;
-            break;
-            case 7:
-                updateHigh();
-                state = 8;
-            break;
-            case 8:
-                callstack();
-                state = 1;
+            // break;
+            // case 6:
+            //     updateLow();
+            //     state = 8;
+            // break;
+            // case 7:
+            //     updateHigh();
+            //     state = 8;
+            // break;
+            // case 8:
+            //     callstack();
+            //     state = 1;
             break;
             case 9:
                 success();
@@ -94,7 +95,9 @@ void Recursive::scan() {
 }
 
 void Recursive::readlow() {     //状态1-
-    low = work_stack.top().low;
+    current_in = 0;
+    low = inputtap[current_in];
+    current_in++;
 }
 
 void Recursive::getstack() {//状态1-
@@ -102,15 +105,14 @@ void Recursive::getstack() {//状态1-
     heigh = work_stack.top().high;    //读取heigh
 }
 
-
 int Recursive::compareHeigh() {     //状态2
+    heigh = inputtap[current_in];
     if(low>heigh) {
         return 0;
     }
-    return 4;
+    return 3;
 }
 int Recursive::findMiddle() {      //状态4
-    current_in = work_stack.top().mid+1;
     int middle = inputtap[current_in];//
     current_work = 0;
     worktap[0] = middle;
@@ -118,33 +120,39 @@ int Recursive::findMiddle() {      //状态4
     return middle;
 }
 int Recursive::getMiddle() {        //状态3-
-    int middle_index =  work_stack.top().mid;
+    int middle_index =  (heigh+low)/2+3;
+    current_in = middle_index;
     return middle_index;
 }
 int Recursive::compareMiddle() {      //状态5
     int mid = worktap[0];
-    current_in = 0;
-    int target = inputtap[0];
+    current_in = 2;
+    int target = inputtap[2];
     int state;
     if (mid == target) {
         state = 9;
     } else if (mid < target) {
-        state = 6;
+        state = 1;
+        updateLow();
+        callstack();
     } else {
-        state = 7;
+        state = 1;
+        updateHigh();
+        callstack();
     }
     return state;
 }
 
 void Recursive::updateLow() {       //状态6
-    low = work_stack.top().mid + 1;
+    low = worktap[0] + 1;
 }
 
 void Recursive::updateHigh() {       //状态7
-    heigh = work_stack.top().mid - 1;
+    heigh = worktap[0] - 1;
 }
 void Recursive::callstack() {       //状态8
-    work_stack.push({low,heigh,(low+heigh)/2});
+    work_stack.push({inputtap[0],inputtap[1],(inputtap[0]+inputtap[1])/2});
+    inputtap[0] = low;inputtap[1] = heigh;
     cout<<"push"<<endl;
 }
 
@@ -187,26 +195,6 @@ void Recursive::showstack() {
     cout<<"------"<<endl;
 }
 
-// int BinarySearch(int left,int right,int a[],const int x) //主函数
-// {
-//     if(left<=right)  //找到left，并且比较right
-//     {
-//         int middle = (left+right)/2; //计算得到middle
-//         if(a[middle]==x) //取middle值，进行判断
-//         {
-//             return middle;   //success
-//         }
-//         else if(x>a[middle])
-//         {
-//             return BinarySearch(middle+1,right,a,x); //压栈递归下一层
-//         }
-//         else
-//             return BinarySearch(left,middle-1,a,x);//压栈递归下一层
-//     }
-//     return -1;   //stop
-// }
-
 Recursive::~Recursive() {
     cout<<endl<<"Destructor called"<<endl;
 }
-
