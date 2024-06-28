@@ -110,10 +110,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/Inter_BinarySer.cpp">
-			<Option target="Turing_Machine"/>
-		</Unit>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/Inter_BinarySer.h">
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui_main_interface.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui_turing.h">
@@ -122,7 +119,7 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/BinarySearch.h">
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Inter_BinarySer.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Library.h">
@@ -131,16 +128,25 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/QuickSort.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/main_interface.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/turing.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/main.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/BinarySearch.cpp">
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/main_interface.ui">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/Inter_BinarySer.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/main_interface.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/turing.cpp">

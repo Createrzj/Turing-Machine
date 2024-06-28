@@ -18,14 +18,14 @@ add_executable(Turing_Machine main.cpp
         src/turing.cpp
         include/turing.h
         turing.ui
-        src/BinarySearch.cpp
-        include/BinarySearch.h
-        include/BinarySearch.h
         src/QuickSort.cpp
         include/QuickSort.h
         include/Library.h
-        include/Library.h
-        Inter_BinarySer.cpp
+        include/Inter_BinarySer.h
+        src/Inter_BinarySer.cpp
+        src/main_interface.cpp
+        include/main_interface.h
+        main_interface.ui
 )
 target_link_libraries(Turing_Machine
         Qt5::Core

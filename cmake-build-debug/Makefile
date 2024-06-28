@@ -141,30 +141,6 @@ Turing_Machine_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine_autogen.dir\build.make CMakeFiles/Turing_Machine_autogen.dir/build
 .PHONY : Turing_Machine_autogen/fast
 
-Inter_BinarySer.obj: Inter_BinarySer.cpp.obj
-.PHONY : Inter_BinarySer.obj
-
-# target to build an object file
-Inter_BinarySer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.obj
-.PHONY : Inter_BinarySer.cpp.obj
-
-Inter_BinarySer.i: Inter_BinarySer.cpp.i
-.PHONY : Inter_BinarySer.i
-
-# target to preprocess a source file
-Inter_BinarySer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.i
-.PHONY : Inter_BinarySer.cpp.i
-
-Inter_BinarySer.s: Inter_BinarySer.cpp.s
-.PHONY : Inter_BinarySer.s
-
-# target to generate assembly for a file
-Inter_BinarySer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/Inter_BinarySer.cpp.s
-.PHONY : Inter_BinarySer.cpp.s
-
 Turing_Machine_autogen/mocs_compilation.obj: Turing_Machine_autogen/mocs_compilation.cpp.obj
 .PHONY : Turing_Machine_autogen/mocs_compilation.obj
 
@@ -213,29 +189,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/BinarySearch.obj: src/BinarySearch.cpp.obj
-.PHONY : src/BinarySearch.obj
+src/Inter_BinarySer.obj: src/Inter_BinarySer.cpp.obj
+.PHONY : src/Inter_BinarySer.obj
 
 # target to build an object file
-src/BinarySearch.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.obj
-.PHONY : src/BinarySearch.cpp.obj
+src/Inter_BinarySer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj
+.PHONY : src/Inter_BinarySer.cpp.obj
 
-src/BinarySearch.i: src/BinarySearch.cpp.i
-.PHONY : src/BinarySearch.i
+src/Inter_BinarySer.i: src/Inter_BinarySer.cpp.i
+.PHONY : src/Inter_BinarySer.i
 
 # target to preprocess a source file
-src/BinarySearch.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.i
-.PHONY : src/BinarySearch.cpp.i
+src/Inter_BinarySer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.i
+.PHONY : src/Inter_BinarySer.cpp.i
 
-src/BinarySearch.s: src/BinarySearch.cpp.s
-.PHONY : src/BinarySearch.s
+src/Inter_BinarySer.s: src/Inter_BinarySer.cpp.s
+.PHONY : src/Inter_BinarySer.s
 
 # target to generate assembly for a file
-src/BinarySearch.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BinarySearch.cpp.s
-.PHONY : src/BinarySearch.cpp.s
+src/Inter_BinarySer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.s
+.PHONY : src/Inter_BinarySer.cpp.s
 
 src/QuickSort.obj: src/QuickSort.cpp.obj
 .PHONY : src/QuickSort.obj
@@ -260,6 +236,30 @@ src/QuickSort.s: src/QuickSort.cpp.s
 src/QuickSort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s
 .PHONY : src/QuickSort.cpp.s
+
+src/main_interface.obj: src/main_interface.cpp.obj
+.PHONY : src/main_interface.obj
+
+# target to build an object file
+src/main_interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj
+.PHONY : src/main_interface.cpp.obj
+
+src/main_interface.i: src/main_interface.cpp.i
+.PHONY : src/main_interface.i
+
+# target to preprocess a source file
+src/main_interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.i
+.PHONY : src/main_interface.cpp.i
+
+src/main_interface.s: src/main_interface.cpp.s
+.PHONY : src/main_interface.s
+
+# target to generate assembly for a file
+src/main_interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.s
+.PHONY : src/main_interface.cpp.s
 
 src/turing.obj: src/turing.cpp.obj
 .PHONY : src/turing.obj
@@ -295,21 +295,21 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Turing_Machine_autogen
 	@echo ... Turing_Machine
-	@echo ... Inter_BinarySer.obj
-	@echo ... Inter_BinarySer.i
-	@echo ... Inter_BinarySer.s
 	@echo ... Turing_Machine_autogen/mocs_compilation.obj
 	@echo ... Turing_Machine_autogen/mocs_compilation.i
 	@echo ... Turing_Machine_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/BinarySearch.obj
-	@echo ... src/BinarySearch.i
-	@echo ... src/BinarySearch.s
+	@echo ... src/Inter_BinarySer.obj
+	@echo ... src/Inter_BinarySer.i
+	@echo ... src/Inter_BinarySer.s
 	@echo ... src/QuickSort.obj
 	@echo ... src/QuickSort.i
 	@echo ... src/QuickSort.s
+	@echo ... src/main_interface.obj
+	@echo ... src/main_interface.i
+	@echo ... src/main_interface.s
 	@echo ... src/turing.obj
 	@echo ... src/turing.i
 	@echo ... src/turing.s
