@@ -60,7 +60,7 @@ void KnapsackTuringMachine::writeM() {
         knapsackState = READ_WEIGHT;
     }
     if (i == 0){
-        knapsackState = KNAPSACK_SUCCESS;
+        knapsackState = RESULT;
     }
 }
 
@@ -90,6 +90,7 @@ void KnapsackTuringMachine::getresult() {
     for(int w=0;w<numItems;w++) {
         cout<<result[w]<<" ";
     }
+        cout<<endl;
 }
 
 // Ö´ÐÐ×´Ì¬»ú
@@ -113,6 +114,9 @@ int KnapsackTuringMachine::Kexecute() {
         case WRITE_M:
             writeM();
             break;
+        case RESULT:
+            getresult();
+            break;
         case KNAPSACK_SUCCESS:
             max=worktape[0];
             for (int i = 0; i <= capacity; i++) {
@@ -122,8 +126,6 @@ int KnapsackTuringMachine::Kexecute() {
             for(int h=0;h<(capacity + 1)*numItems;h++) {
                 cout<<worktape[h]<<" ";
             }
-            cout<<endl;
-            getresult();
             cout<<endl;
             return max;
         }

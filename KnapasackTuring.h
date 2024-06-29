@@ -17,7 +17,7 @@ public:
 private:
     enum KnapsackState {
         READ_CAPACITY, READ_NUM, READ_WEIGHT, READ_VALUE,
-        WRITE_M, KNAPSACK_SUCCESS,
+        WRITE_M, KNAPSACK_SUCCESS,RESULT
     };
     int steps;
     int tapeSpace;
