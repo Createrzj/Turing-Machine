@@ -16,6 +16,7 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -42,6 +43,7 @@ public:
     QPushButton *Return;
     QPushButton *Recursive_Binary_Search;
     QPushButton *restore;
+    QTextEdit *STACK;
 
     void setupUi(QWidget *Turing)
     {
@@ -222,6 +224,16 @@ public:
 "{\n"
 "	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "}"));
+        STACK = new QTextEdit(Turing);
+        STACK->setObjectName(QString::fromUtf8("STACK"));
+        STACK->setGeometry(QRect(20, 340, 191, 231));
+        STACK->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
+"    border-width: 2px 2px 0px 2px; /* \344\270\212\343\200\201\345\217\263\343\200\201\344\270\213\350\276\271\346\241\2061px\357\274\214\345\267\246\350\276\271\346\241\2060px */\n"
+"    border-style: solid;\n"
+"    border-color: black; /* \350\276\271\346\241\206\351\242\234\350\211\262\344\270\272\351\273\221\350\211\262 */\n"
+"	font: 13pt \"\345\256\213\344\275\223\";\n"
+"}\n"
+""));
 
         retranslateUi(Turing);
 

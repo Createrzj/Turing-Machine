@@ -50,6 +50,9 @@ Turing::Turing(QWidget *parent) :
     ui->workTape->verticalHeader()->setVisible(false);
     ui->workTape->horizontalHeader()->setVisible(false);
 
+    ui->STACK->setAlignment(Qt::AlignCenter);
+    ui->STACK->append("workTape");
+    ui->STACK->append("wp");
 }
 
 Turing::~Turing() {

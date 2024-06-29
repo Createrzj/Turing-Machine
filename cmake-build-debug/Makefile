@@ -213,6 +213,30 @@ src/Inter_BinarySer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.s
 .PHONY : src/Inter_BinarySer.cpp.s
 
+src/KnapsackTuring.obj: src/KnapsackTuring.cpp.obj
+.PHONY : src/KnapsackTuring.obj
+
+# target to build an object file
+src/KnapsackTuring.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.obj
+.PHONY : src/KnapsackTuring.cpp.obj
+
+src/KnapsackTuring.i: src/KnapsackTuring.cpp.i
+.PHONY : src/KnapsackTuring.i
+
+# target to preprocess a source file
+src/KnapsackTuring.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.i
+.PHONY : src/KnapsackTuring.cpp.i
+
+src/KnapsackTuring.s: src/KnapsackTuring.cpp.s
+.PHONY : src/KnapsackTuring.s
+
+# target to generate assembly for a file
+src/KnapsackTuring.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.s
+.PHONY : src/KnapsackTuring.cpp.s
+
 src/QuickSort.obj: src/QuickSort.cpp.obj
 .PHONY : src/QuickSort.obj
 
@@ -328,6 +352,9 @@ help:
 	@echo ... src/Inter_BinarySer.obj
 	@echo ... src/Inter_BinarySer.i
 	@echo ... src/Inter_BinarySer.s
+	@echo ... src/KnapsackTuring.obj
+	@echo ... src/KnapsackTuring.i
+	@echo ... src/KnapsackTuring.s
 	@echo ... src/QuickSort.obj
 	@echo ... src/QuickSort.i
 	@echo ... src/QuickSort.s

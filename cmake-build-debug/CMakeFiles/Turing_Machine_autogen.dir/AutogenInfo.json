@@ -89,6 +89,12 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/include/KnapasackTuring.h",
+			"MU",
+			"6YEA5652QU/moc_KnapasackTuring.cpp",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/include/Library.h",
 			"MU",
 			"6YEA5652QU/moc_Library.cpp",
@@ -173,6 +179,11 @@
 		[ "D:/programing/CLionProjects/Turing Machine/main.cpp", "MU", null ],
 		[
 			"D:/programing/CLionProjects/Turing Machine/src/Inter_BinarySer.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/KnapsackTuring.cpp",
 			"MU",
 			null
 		],

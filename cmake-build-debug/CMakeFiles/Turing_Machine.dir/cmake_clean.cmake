@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Turing_Machine.dir/main.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj.d"
+  "CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.obj"
+  "CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
