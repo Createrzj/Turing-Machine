@@ -213,6 +213,30 @@ src/Inter_BinarySer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.s
 .PHONY : src/Inter_BinarySer.cpp.s
 
+src/KnapsackTuring.obj: src/KnapsackTuring.cpp.obj
+.PHONY : src/KnapsackTuring.obj
+
+# target to build an object file
+src/KnapsackTuring.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.obj
+.PHONY : src/KnapsackTuring.cpp.obj
+
+src/KnapsackTuring.i: src/KnapsackTuring.cpp.i
+.PHONY : src/KnapsackTuring.i
+
+# target to preprocess a source file
+src/KnapsackTuring.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.i
+.PHONY : src/KnapsackTuring.cpp.i
+
+src/KnapsackTuring.s: src/KnapsackTuring.cpp.s
+.PHONY : src/KnapsackTuring.s
+
+# target to generate assembly for a file
+src/KnapsackTuring.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.s
+.PHONY : src/KnapsackTuring.cpp.s
+
 src/QuickSort.obj: src/QuickSort.cpp.obj
 .PHONY : src/QuickSort.obj
 
@@ -236,6 +260,30 @@ src/QuickSort.s: src/QuickSort.cpp.s
 src/QuickSort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.s
 .PHONY : src/QuickSort.cpp.s
+
+src/Recur_BinarySer.obj: src/Recur_BinarySer.cpp.obj
+.PHONY : src/Recur_BinarySer.obj
+
+# target to build an object file
+src/Recur_BinarySer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj
+.PHONY : src/Recur_BinarySer.cpp.obj
+
+src/Recur_BinarySer.i: src/Recur_BinarySer.cpp.i
+.PHONY : src/Recur_BinarySer.i
+
+# target to preprocess a source file
+src/Recur_BinarySer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.i
+.PHONY : src/Recur_BinarySer.cpp.i
+
+src/Recur_BinarySer.s: src/Recur_BinarySer.cpp.s
+.PHONY : src/Recur_BinarySer.s
+
+# target to generate assembly for a file
+src/Recur_BinarySer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.s
+.PHONY : src/Recur_BinarySer.cpp.s
 
 src/main_interface.obj: src/main_interface.cpp.obj
 .PHONY : src/main_interface.obj
@@ -304,9 +352,15 @@ help:
 	@echo ... src/Inter_BinarySer.obj
 	@echo ... src/Inter_BinarySer.i
 	@echo ... src/Inter_BinarySer.s
+	@echo ... src/KnapsackTuring.obj
+	@echo ... src/KnapsackTuring.i
+	@echo ... src/KnapsackTuring.s
 	@echo ... src/QuickSort.obj
 	@echo ... src/QuickSort.i
 	@echo ... src/QuickSort.s
+	@echo ... src/Recur_BinarySer.obj
+	@echo ... src/Recur_BinarySer.i
+	@echo ... src/Recur_BinarySer.s
 	@echo ... src/main_interface.obj
 	@echo ... src/main_interface.i
 	@echo ... src/main_interface.s

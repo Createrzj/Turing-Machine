@@ -19,6 +19,7 @@
 #include <QTimer>
 #include <QSequentialAnimationGroup>
 #include <QEventLoop>
+#include <QStack>
 
 #define TABLEWIDGET_WIDTH 60
 #define TABLEWIDGET_HEIGHT 50

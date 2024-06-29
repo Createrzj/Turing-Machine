@@ -12,8 +12,15 @@ Turing::Turing(QWidget *parent) :
 
     this->Numbers = QStringList();
     Turing_BinarySer.ui = ui;
+    Recyrsive_BinarySer.ui = ui;
+    Anima->setTargetObject(ui->tape);
+    Anima->setPropertyName("pos");
+    Anima1->setTargetObject(ui->workTape);
+    Anima1->setPropertyName("pos");
     //按钮信号连接
     connect(ui->Iterative_Binary_Search, SIGNAL(clicked(bool)), this, SLOT(BinarySearch_Iterative()));
+    connect(ui->Recursive_Binary_Search, SIGNAL(clicked(bool)), this, SLOT(BinarySearch_Recursive()));
+    connect(ui->restore, SIGNAL(clicked(bool)), this, SLOT(Restore()));
 
     ui->picture_turing->setPixmap(
             QPixmap(QString::fromUtf8("D:/programing/CLionProjects/Turing Machine/resources/turing_machine.png")));
@@ -43,6 +50,9 @@ Turing::Turing(QWidget *parent) :
     ui->workTape->verticalHeader()->setVisible(false);
     ui->workTape->horizontalHeader()->setVisible(false);
 
+    ui->STACK->setAlignment(Qt::AlignCenter);
+    ui->STACK->append("workTape");
+    ui->STACK->append("wp");
 }
 
 Turing::~Turing() {
@@ -66,6 +76,26 @@ void Turing::BinarySearch_Iterative() {
     this->ChangeToList();
     this->initTape();
     int result = Turing_BinarySer.execute();
+    ui->output_Binary->setText(QString::number(result));
+}
+
+void Turing::BinarySearch_Recursive() {
+    if (ui->input_BianrySer->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入目标序列!");
+        return;
+    }
+    if (ui->Target->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入目标数字!");
+        return;
+    }
+    QString input = ui->input_BianrySer->text();
+    quicksort->Preprocess(input);
+    quicksort->quickSort(intNumbers, 0, intNumbers.size() - 1);
+    this->Numbers.clear();
+    this->ChangeToList();
+    this->initTape();
+//    int result = Turing_BinarySer.execute();
+    int result = Recyrsive_BinarySer.execute();
     ui->output_Binary->setText(QString::number(result));
 }
 
@@ -108,5 +138,30 @@ void Turing::initTape() {
         ui->tape->setColumnWidth(i, TABLEWIDGET_WIDTH);
         ui->tape->setItem(0, i, item);
     }
+}
+
+void Turing::Restore() {
+    ui->input_BianrySer->clear();
+    ui->Target->clear();
+    ui->steps->clear();
+    ui->grids->clear();
+    ui->output_Binary->clear();
+
+    Anima->setDuration(2000);
+    Anima->setStartValue(ui->tape->geometry().topLeft());
+    Anima->setEndValue(QPoint(545, 330));
+    Anima->start();
+
+    Anima1->setDuration(2000);
+    Anima1->setStartValue(ui->workTape->geometry().topLeft());
+    Anima1->setEndValue(QPoint(545, 570));
+    Anima1->start();
+
+    auto item1 = new QTableWidgetItem();
+    ui->workTape->setItem(0, 0, item1);
+    auto item2 = new QTableWidgetItem();
+    ui->workTape->setItem(0, 1, item2);
+    auto item3 = new QTableWidgetItem();
+    ui->workTape->setItem(0, 2, item3);
 }
 

@@ -89,6 +89,12 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/include/KnapasackTuring.h",
+			"MU",
+			"6YEA5652QU/moc_KnapasackTuring.cpp",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/include/Library.h",
 			"MU",
 			"6YEA5652QU/moc_Library.cpp",
@@ -98,6 +104,12 @@
 			"D:/programing/CLionProjects/Turing Machine/include/QuickSort.h",
 			"MU",
 			"6YEA5652QU/moc_QuickSort.cpp",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/include/Recur_BinarySer.h",
+			"MU",
+			"6YEA5652QU/moc_Recur_BinarySer.cpp",
 			null
 		],
 		[
@@ -171,7 +183,17 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/src/KnapsackTuring.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp",
 			"MU",
 			null
 		],
