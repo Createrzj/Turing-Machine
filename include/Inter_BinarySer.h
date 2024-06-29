@@ -20,6 +20,7 @@ public:
     void moveWorkTape(int pos);// 移动工作纸带
     void delay(int milliseonds);
     void Initial();// 初始化
+    void updateLine();// 更新
 
 private:
     enum State {

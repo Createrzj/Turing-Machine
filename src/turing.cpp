@@ -51,8 +51,6 @@ Turing::Turing(QWidget *parent) :
     ui->workTape->horizontalHeader()->setVisible(false);
 
     ui->STACK->setAlignment(Qt::AlignCenter);
-    ui->STACK->append("workTape");
-    ui->STACK->append("wp");
 }
 
 Turing::~Turing() {
@@ -94,9 +92,10 @@ void Turing::BinarySearch_Recursive() {
     this->Numbers.clear();
     this->ChangeToList();
     this->initTape();
-//    int result = Turing_BinarySer.execute();
     int result = Recyrsive_BinarySer.execute();
     ui->output_Binary->setText(QString::number(result));
+    QString output_line = ui->output_tape_line->text();
+    ui->output_tape_line->setText("#output tape：" + output_line);
 }
 
 // 快速排序之后数据转换为QStringList
@@ -146,15 +145,16 @@ void Turing::Restore() {
     ui->steps->clear();
     ui->grids->clear();
     ui->output_Binary->clear();
+    ui->STACK->clear();
 
     Anima->setDuration(2000);
     Anima->setStartValue(ui->tape->geometry().topLeft());
-    Anima->setEndValue(QPoint(545, 330));
+    Anima->setEndValue(QPoint(405, 300));
     Anima->start();
 
     Anima1->setDuration(2000);
     Anima1->setStartValue(ui->workTape->geometry().topLeft());
-    Anima1->setEndValue(QPoint(545, 570));
+    Anima1->setEndValue(QPoint(405, 500));
     Anima1->start();
 
     auto item1 = new QTableWidgetItem();

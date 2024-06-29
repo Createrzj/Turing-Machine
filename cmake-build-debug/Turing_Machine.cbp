@@ -122,9 +122,6 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Inter_BinarySer.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/KnapasackTuring.h">
-			<Option target="Turing_Machine"/>
-		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Library.h">
 			<Option target="Turing_Machine"/>
 		</Unit>

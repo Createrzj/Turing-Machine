@@ -89,8 +89,8 @@ border:2px solid black
   <widget class="QTableWidget" name="tape">
    <property name="geometry">
     <rect>
-     <x>545</x>
-     <y>330</y>
+     <x>405</x>
+     <y>300</y>
      <width>300</width>
      <height>50</height>
     </rect>
@@ -137,8 +137,8 @@ border:2px solid black
   <widget class="QTableWidget" name="workTape">
    <property name="geometry">
     <rect>
-     <x>545</x>
-     <y>570</y>
+     <x>405</x>
+     <y>500</y>
      <width>301</width>
      <height>51</height>
     </rect>
@@ -157,8 +157,8 @@ border:2px solid black
   <widget class="QLineEdit" name="steps">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>250</y>
+     <x>830</x>
+     <y>430</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -185,8 +185,8 @@ border:2px solid black
   <widget class="QLabel" name="picture_turing">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>210</y>
+     <x>390</x>
+     <y>180</y>
      <width>91</width>
      <height>81</height>
     </rect>
@@ -206,8 +206,8 @@ border:2px solid white
   <widget class="QLabel" name="picture_arrowhead">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>290</y>
+     <x>420</x>
+     <y>260</y>
      <width>30</width>
      <height>40</height>
     </rect>
@@ -225,8 +225,8 @@ border:2px solid white
   <widget class="QLabel" name="picture_arrowhead_2">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>530</y>
+     <x>420</x>
+     <y>460</y>
      <width>30</width>
      <height>40</height>
     </rect>
@@ -244,8 +244,8 @@ border:2px solid white
   <widget class="QLabel" name="picture_turing_2">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>450</y>
+     <x>390</x>
+     <y>380</y>
      <width>91</width>
      <height>81</height>
     </rect>
@@ -265,8 +265,8 @@ border:2px solid white
   <widget class="QLineEdit" name="output_Binary">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>250</y>
+     <x>830</x>
+     <y>710</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -296,8 +296,8 @@ border:2px solid black
   <widget class="QLineEdit" name="output_process">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>230</y>
+     <x>490</x>
+     <y>200</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -321,8 +321,8 @@ border:2px solid black
   <widget class="QLineEdit" name="grids">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>250</y>
+     <x>830</x>
+     <y>570</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -346,8 +346,8 @@ border:2px solid black
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>220</y>
+     <x>850</x>
+     <y>400</y>
      <width>71</width>
      <height>21</height>
     </rect>
@@ -377,8 +377,8 @@ font: 15pt &quot;华文楷体&quot;;
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>220</y>
+     <x>810</x>
+     <y>540</y>
      <width>161</width>
      <height>21</height>
     </rect>
@@ -408,8 +408,8 @@ font: 15pt &quot;华文楷体&quot;;
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>220</y>
+     <x>850</x>
+     <y>680</y>
      <width>71</width>
      <height>21</height>
     </rect>
@@ -523,9 +523,9 @@ font: 15pt &quot;华文楷体&quot;;
   <widget class="QTextEdit" name="STACK">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>340</y>
-     <width>191</width>
+     <x>10</x>
+     <y>480</y>
+     <width>261</width>
      <height>231</height>
     </rect>
    </property>
@@ -537,6 +537,121 @@ font: 15pt &quot;华文楷体&quot;;
 	font: 13pt &quot;宋体&quot;;
 }
 </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>450</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文楷体</family>
+     <pointsize>15</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+font: 15pt &quot;华文楷体&quot;;
+
+}</string>
+   </property>
+   <property name="text">
+    <string>STACK</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_tape_line">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>600</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+font: 12pt &quot;华文楷体&quot;;
+
+}</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string extracomment="二分搜索，请输入初始序列">#input tape：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="work_tape_line">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>660</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+font: 12pt &quot;华文楷体&quot;;
+
+}</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string extracomment="二分搜索，请输入初始序列">#work tape：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="output_tape_line">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>720</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit{
+font: 12pt &quot;华文楷体&quot;;
+
+}</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string extracomment="二分搜索，请输入初始序列">#outputput tape：</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string/>
    </property>
   </widget>
  </widget>

@@ -44,6 +44,10 @@ public:
     QPushButton *Recursive_Binary_Search;
     QPushButton *restore;
     QTextEdit *STACK;
+    QLabel *label_4;
+    QLineEdit *input_tape_line;
+    QLineEdit *work_tape_line;
+    QLineEdit *output_tape_line;
 
     void setupUi(QWidget *Turing)
     {
@@ -79,7 +83,7 @@ public:
         input_BianrySer->setAlignment(Qt::AlignCenter);
         tape = new QTableWidget(Turing);
         tape->setObjectName(QString::fromUtf8("tape"));
-        tape->setGeometry(QRect(545, 330, 300, 50));
+        tape->setGeometry(QRect(405, 300, 300, 50));
         QFont font2;
         font2.setPointSize(13);
         font2.setBold(true);
@@ -100,12 +104,12 @@ public:
         Target->setAlignment(Qt::AlignCenter);
         workTape = new QTableWidget(Turing);
         workTape->setObjectName(QString::fromUtf8("workTape"));
-        workTape->setGeometry(QRect(545, 570, 301, 51));
+        workTape->setGeometry(QRect(405, 500, 301, 51));
         workTape->setFont(font2);
         workTape->setStyleSheet(QString::fromUtf8(""));
         steps = new QLineEdit(Turing);
         steps->setObjectName(QString::fromUtf8("steps"));
-        steps->setGeometry(QRect(20, 250, 121, 41));
+        steps->setGeometry(QRect(830, 430, 121, 41));
         steps->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "border:2px solid black\n"
@@ -114,31 +118,31 @@ public:
         steps->setReadOnly(false);
         picture_turing = new QLabel(Turing);
         picture_turing->setObjectName(QString::fromUtf8("picture_turing"));
-        picture_turing->setGeometry(QRect(530, 210, 91, 81));
+        picture_turing->setGeometry(QRect(390, 180, 91, 81));
         picture_turing->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "border:2px solid white\n"
 "}"));
         picture_turing->setScaledContents(true);
         picture_arrowhead = new QLabel(Turing);
         picture_arrowhead->setObjectName(QString::fromUtf8("picture_arrowhead"));
-        picture_arrowhead->setGeometry(QRect(560, 290, 30, 40));
+        picture_arrowhead->setGeometry(QRect(420, 260, 30, 40));
         picture_arrowhead->setStyleSheet(QString::fromUtf8(""));
         picture_arrowhead->setScaledContents(true);
         picture_arrowhead_2 = new QLabel(Turing);
         picture_arrowhead_2->setObjectName(QString::fromUtf8("picture_arrowhead_2"));
-        picture_arrowhead_2->setGeometry(QRect(560, 530, 30, 40));
+        picture_arrowhead_2->setGeometry(QRect(420, 460, 30, 40));
         picture_arrowhead_2->setStyleSheet(QString::fromUtf8(""));
         picture_arrowhead_2->setScaledContents(true);
         picture_turing_2 = new QLabel(Turing);
         picture_turing_2->setObjectName(QString::fromUtf8("picture_turing_2"));
-        picture_turing_2->setGeometry(QRect(530, 450, 91, 81));
+        picture_turing_2->setGeometry(QRect(390, 380, 91, 81));
         picture_turing_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "border:2px solid white\n"
 "}"));
         picture_turing_2->setScaledContents(true);
         output_Binary = new QLineEdit(Turing);
         output_Binary->setObjectName(QString::fromUtf8("output_Binary"));
-        output_Binary->setGeometry(QRect(320, 250, 121, 41));
+        output_Binary->setGeometry(QRect(830, 710, 121, 41));
         QFont font3;
         font3.setFamily(QString::fromUtf8("\345\215\216\346\226\207\346\245\267\344\275\223"));
         font3.setPointSize(12);
@@ -153,7 +157,7 @@ public:
         output_Binary->setAlignment(Qt::AlignCenter);
         output_process = new QLineEdit(Turing);
         output_process->setObjectName(QString::fromUtf8("output_process"));
-        output_process->setGeometry(QRect(630, 230, 151, 41));
+        output_process->setGeometry(QRect(490, 200, 151, 41));
         output_process->setFont(font2);
         output_process->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "border:2px solid black\n"
@@ -161,7 +165,7 @@ public:
         output_process->setAlignment(Qt::AlignCenter);
         grids = new QLineEdit(Turing);
         grids->setObjectName(QString::fromUtf8("grids"));
-        grids->setGeometry(QRect(170, 250, 121, 41));
+        grids->setGeometry(QRect(830, 570, 121, 41));
         grids->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "border:2px solid black\n"
@@ -169,7 +173,7 @@ public:
         grids->setAlignment(Qt::AlignCenter);
         label = new QLabel(Turing);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(40, 220, 71, 21));
+        label->setGeometry(QRect(850, 400, 71, 21));
         QFont font4;
         font4.setFamily(QString::fromUtf8("\345\215\216\346\226\207\346\245\267\344\275\223"));
         font4.setPointSize(15);
@@ -184,7 +188,7 @@ public:
         label->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(Turing);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(150, 220, 161, 21));
+        label_2->setGeometry(QRect(810, 540, 161, 21));
         label_2->setFont(font4);
         label_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "font: 15pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
@@ -193,7 +197,7 @@ public:
         label_2->setAlignment(Qt::AlignCenter);
         label_3 = new QLabel(Turing);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(340, 220, 71, 21));
+        label_3->setGeometry(QRect(850, 680, 71, 21));
         label_3->setFont(font4);
         label_3->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "font: 15pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
@@ -226,7 +230,7 @@ public:
 "}"));
         STACK = new QTextEdit(Turing);
         STACK->setObjectName(QString::fromUtf8("STACK"));
-        STACK->setGeometry(QRect(20, 340, 191, 231));
+        STACK->setGeometry(QRect(10, 480, 261, 231));
         STACK->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
 "    border-width: 2px 2px 0px 2px; /* \344\270\212\343\200\201\345\217\263\343\200\201\344\270\213\350\276\271\346\241\2061px\357\274\214\345\267\246\350\276\271\346\241\2060px */\n"
 "    border-style: solid;\n"
@@ -234,6 +238,39 @@ public:
 "	font: 13pt \"\345\256\213\344\275\223\";\n"
 "}\n"
 ""));
+        label_4 = new QLabel(Turing);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(100, 450, 91, 31));
+        label_4->setFont(font4);
+        label_4->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"font: 15pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"\n"
+"}"));
+        label_4->setAlignment(Qt::AlignCenter);
+        input_tape_line = new QLineEdit(Turing);
+        input_tape_line->setObjectName(QString::fromUtf8("input_tape_line"));
+        input_tape_line->setGeometry(QRect(340, 600, 381, 41));
+        input_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"\n"
+"}"));
+        input_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        work_tape_line = new QLineEdit(Turing);
+        work_tape_line->setObjectName(QString::fromUtf8("work_tape_line"));
+        work_tape_line->setGeometry(QRect(340, 660, 381, 41));
+        work_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"\n"
+"}"));
+        work_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        output_tape_line = new QLineEdit(Turing);
+        output_tape_line->setObjectName(QString::fromUtf8("output_tape_line"));
+        output_tape_line->setGeometry(QRect(340, 720, 381, 41));
+        output_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"\n"
+"}"));
+        output_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         retranslateUi(Turing);
 
@@ -263,6 +300,16 @@ public:
         Return->setText(QCoreApplication::translate("Turing", "\350\277\224\345\233\236", nullptr));
         Recursive_Binary_Search->setText(QCoreApplication::translate("Turing", "\351\200\222\345\275\222\344\272\214\345\210\206\346\220\234\347\264\242", nullptr));
         restore->setText(QCoreApplication::translate("Turing", "\351\207\215\347\275\256", nullptr));
+        label_4->setText(QCoreApplication::translate("Turing", "STACK", nullptr));
+        input_tape_line->setInputMask(QString());
+        input_tape_line->setText(QCoreApplication::translate("Turing", "#input tape\357\274\232", nullptr));
+        input_tape_line->setPlaceholderText(QString());
+        work_tape_line->setInputMask(QString());
+        work_tape_line->setText(QCoreApplication::translate("Turing", "#work tape\357\274\232", nullptr));
+        work_tape_line->setPlaceholderText(QString());
+        output_tape_line->setInputMask(QString());
+        output_tape_line->setText(QCoreApplication::translate("Turing", "#outputput tape\357\274\232", nullptr));
+        output_tape_line->setPlaceholderText(QString());
     } // retranslateUi
 
 };

@@ -113,8 +113,15 @@ int Recur_BinarySer::execute() {
                 break;
 
             case CALL:
-                qDebug() << "111";
                 ui->output_process->setText("CALL");
+                temp = "";
+                temp += "low:";
+                temp += QString::number(low);
+                temp += " high:";
+                temp += QString::number(high);
+                temp += " mid:";
+                temp += QString::number(mid);
+                ui->STACK->append(temp);
                 //还原输入纸带
                 this->moveTape(0 - inputPos);
                 this->start_posTape = this->end_posTape;

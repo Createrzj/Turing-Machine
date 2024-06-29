@@ -184,4 +184,8 @@ void Inter_BinarySer::Initial() {
     start_posWorkTape = ui->workTape->geometry().topLeft();
 }
 
+void Inter_BinarySer::updateLine() {
+
+}
+
 
