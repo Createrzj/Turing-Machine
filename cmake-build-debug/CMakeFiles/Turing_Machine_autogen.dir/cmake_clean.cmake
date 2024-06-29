@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Turing_Machine_autogen"
+  "Turing_Machine_autogen/include/ui_main_interface.h"
   "Turing_Machine_autogen/include/ui_turing.h"
   "Turing_Machine_autogen/mocs_compilation.cpp"
 )

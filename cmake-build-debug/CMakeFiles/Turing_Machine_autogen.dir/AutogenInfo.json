@@ -83,9 +83,9 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/programing/CLionProjects/Turing Machine/include/BinarySearch.h",
+			"D:/programing/CLionProjects/Turing Machine/include/Inter_BinarySer.h",
 			"MU",
-			"6YEA5652QU/moc_BinarySearch.cpp",
+			"6YEA5652QU/moc_Inter_BinarySer.cpp",
 			null
 		],
 		[
@@ -98,6 +98,12 @@
 			"D:/programing/CLionProjects/Turing Machine/include/QuickSort.h",
 			"MU",
 			"6YEA5652QU/moc_QuickSort.cpp",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/include/main_interface.h",
+			"MU",
+			"6YEA5652QU/moc_main_interface.cpp",
 			null
 		],
 		[
@@ -160,12 +166,17 @@
 	[
 		[ "D:/programing/CLionProjects/Turing Machine/main.cpp", "MU", null ],
 		[
-			"D:/programing/CLionProjects/Turing Machine/src/BinarySearch.cpp",
+			"D:/programing/CLionProjects/Turing Machine/src/Inter_BinarySer.cpp",
 			"MU",
 			null
 		],
 		[
 			"D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/main_interface.cpp",
 			"MU",
 			null
 		],
