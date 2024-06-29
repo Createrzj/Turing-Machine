@@ -26,7 +26,6 @@ add_executable(Turing_Machine main.cpp
         src/main_interface.cpp
         include/main_interface.h
         main_interface.ui
-        src/Recursive.cpp
         src/Recur_BinarySer.cpp
         include/Recur_BinarySer.h
 )

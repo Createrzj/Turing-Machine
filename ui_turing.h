@@ -40,6 +40,8 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QPushButton *Return;
+    QPushButton *Recursive_Binary_Search;
+    QPushButton *restore;
 
     void setupUi(QWidget *Turing)
     {
@@ -101,7 +103,7 @@ public:
         workTape->setStyleSheet(QString::fromUtf8(""));
         steps = new QLineEdit(Turing);
         steps->setObjectName(QString::fromUtf8("steps"));
-        steps->setGeometry(QRect(50, 270, 121, 41));
+        steps->setGeometry(QRect(20, 250, 121, 41));
         steps->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "border:2px solid black\n"
@@ -134,7 +136,7 @@ public:
         picture_turing_2->setScaledContents(true);
         output_Binary = new QLineEdit(Turing);
         output_Binary->setObjectName(QString::fromUtf8("output_Binary"));
-        output_Binary->setGeometry(QRect(50, 490, 121, 41));
+        output_Binary->setGeometry(QRect(320, 250, 121, 41));
         QFont font3;
         font3.setFamily(QString::fromUtf8("\345\215\216\346\226\207\346\245\267\344\275\223"));
         font3.setPointSize(12);
@@ -157,7 +159,7 @@ public:
         output_process->setAlignment(Qt::AlignCenter);
         grids = new QLineEdit(Turing);
         grids->setObjectName(QString::fromUtf8("grids"));
-        grids->setGeometry(QRect(240, 270, 121, 41));
+        grids->setGeometry(QRect(170, 250, 121, 41));
         grids->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
 "font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "border:2px solid black\n"
@@ -165,7 +167,7 @@ public:
         grids->setAlignment(Qt::AlignCenter);
         label = new QLabel(Turing);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(70, 240, 71, 21));
+        label->setGeometry(QRect(40, 220, 71, 21));
         QFont font4;
         font4.setFamily(QString::fromUtf8("\345\215\216\346\226\207\346\245\267\344\275\223"));
         font4.setPointSize(15);
@@ -180,7 +182,7 @@ public:
         label->setAlignment(Qt::AlignCenter);
         label_2 = new QLabel(Turing);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(220, 240, 161, 21));
+        label_2->setGeometry(QRect(150, 220, 161, 21));
         label_2->setFont(font4);
         label_2->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "font: 15pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
@@ -189,7 +191,7 @@ public:
         label_2->setAlignment(Qt::AlignCenter);
         label_3 = new QLabel(Turing);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(70, 460, 71, 21));
+        label_3->setGeometry(QRect(340, 220, 71, 21));
         label_3->setFont(font4);
         label_3->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "font: 15pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
@@ -201,6 +203,22 @@ public:
         Return->setGeometry(QRect(820, 40, 171, 41));
         Return->setFont(font1);
         Return->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"}"));
+        Recursive_Binary_Search = new QPushButton(Turing);
+        Recursive_Binary_Search->setObjectName(QString::fromUtf8("Recursive_Binary_Search"));
+        Recursive_Binary_Search->setGeometry(QRect(240, 40, 171, 41));
+        Recursive_Binary_Search->setFont(font1);
+        Recursive_Binary_Search->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"}"));
+        restore = new QPushButton(Turing);
+        restore->setObjectName(QString::fromUtf8("restore"));
+        restore->setGeometry(QRect(430, 40, 171, 41));
+        restore->setFont(font1);
+        restore->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
 "	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "}"));
@@ -231,6 +249,8 @@ public:
         label_2->setText(QCoreApplication::translate("Turing", "\345\267\245\344\275\234\347\272\270\345\270\246\347\251\272\351\227\264", nullptr));
         label_3->setText(QCoreApplication::translate("Turing", "\347\273\223\346\236\234", nullptr));
         Return->setText(QCoreApplication::translate("Turing", "\350\277\224\345\233\236", nullptr));
+        Recursive_Binary_Search->setText(QCoreApplication::translate("Turing", "\351\200\222\345\275\222\344\272\214\345\210\206\346\220\234\347\264\242", nullptr));
+        restore->setText(QCoreApplication::translate("Turing", "\351\207\215\347\275\256", nullptr));
     } // retranslateUi
 
 };

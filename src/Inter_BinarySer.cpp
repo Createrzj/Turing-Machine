@@ -6,6 +6,7 @@
 
 Inter_BinarySer::Inter_BinarySer() {
     steps = 0;
+    workSpace = 0;
     state = INIT_LOW;
     target = 0;
 }
@@ -25,6 +26,7 @@ int Inter_BinarySer::execute() {
     while (true) {
         steps++; // 增加步数
         ui->steps->setText(QString::number(steps));
+        ui->grids->setText(QString::number(workSpace));
         switch (state) {
             case INIT_LOW:
                 ui->output_process->setText("INIT_LOW");
@@ -43,6 +45,7 @@ int Inter_BinarySer::execute() {
                 ui->workTape->setItem(0, worksteps++, new QTableWidgetItem(temp));
                 this->moveWorkTape(1);
                 this->start_posWorkTape = this->end_posWorkTape;
+                workSpace++;
                 state = INIT_HIGH;
                 break;
 
@@ -63,6 +66,7 @@ int Inter_BinarySer::execute() {
                 ui->workTape->setItem(0, worksteps--, new QTableWidgetItem(temp));
                 this->moveWorkTape(-1);
                 this->start_posWorkTape = this->end_posWorkTape;
+                workSpace++;
                 state = COMPARE_LOW;
                 break;
 
@@ -87,6 +91,7 @@ int Inter_BinarySer::execute() {
                 worksteps = 2;
                 temp = QString::number(mid);
                 ui->workTape->setItem(0, worksteps, new QTableWidgetItem(temp));
+                workSpace = 3;
                 state = READ_MID;
                 break;
 
@@ -102,6 +107,8 @@ int Inter_BinarySer::execute() {
 
             case COMPARE_MID:
                 ui->output_process->setText("COMPARE_MID");
+                this->moveTape(2 - inputsteps);
+                this->start_posTape = this->end_posTape;
                 if (work == target) {
                     state = SUCCESS;
                 } else if (work < target) {
@@ -164,6 +171,8 @@ void Inter_BinarySer::delay(int milliseonds) {
 }
 
 void Inter_BinarySer::Initial() {
+    steps = 0;
+    workSpace = 0;
     Anima->setTargetObject(ui->tape);
     Anima->setPropertyName("pos");
 

@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj.d"
-  "CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj"
-  "CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj"

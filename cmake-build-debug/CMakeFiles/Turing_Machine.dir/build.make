@@ -158,26 +158,11 @@ CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.s"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\main_interface.cpp" -o CMakeFiles\Turing_Machine.dir\src\main_interface.cpp.s
 
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/Recursive.cpp
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\Recursive.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\Recursive.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\Recursive.cpp"
-
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.i"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\src\Recursive.cpp" > CMakeFiles\Turing_Machine.dir\src\Recursive.cpp.i
-
-CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.s"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\Recursive.cpp" -o CMakeFiles\Turing_Machine.dir\src\Recursive.cpp.s
-
 CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
 CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
 CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/Recur_BinarySer.cpp
 CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\Recur_BinarySer.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\Recur_BinarySer.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\Recur_BinarySer.cpp"
 
 CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.i: cmake_force
@@ -196,7 +181,6 @@ Turing_Machine_OBJECTS = \
 "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj" \
 "CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj" \
 "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj" \
-"CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj" \
 "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
 
 # External object files for target Turing_Machine
@@ -208,7 +192,6 @@ Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/turing.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj
-Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/Recursive.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/build.make
 Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
@@ -217,7 +200,7 @@ Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/linkLibs.rsp
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/objects1.rsp
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Turing_Machine.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Turing_Machine.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Turing_Machine.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -29,6 +29,7 @@ private:
         READ_MID, COMPARE_MID, SUCCESS
     };
     int steps;// 运行步数
+    int workSpace;// 工作纸带运行空间
     int target;// 目标数字
     State state;// 运行状态
     QPropertyAnimation *Anima = new QPropertyAnimation;
