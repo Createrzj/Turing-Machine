@@ -5,7 +5,7 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
-#include "../ui_turing.h"
+#include "../ui/ui_turing.h"
 #include "Library.h"
 extern QVector<int> intNumbers;
 class QuickSort {

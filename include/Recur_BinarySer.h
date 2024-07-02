@@ -6,18 +6,20 @@
 #define TURING_MACHINE_RECUR_BINARYSER_H
 
 #include "Library.h"
-#include "../ui_turing.h"
+#include "../ui/ui_turing.h"
 
 class Recur_BinarySer {
 public:
     Ui::Turing *ui{};
     Recur_BinarySer();
+    void updatePara();// 重复运行初始化参数
     int execute();// 运行主函数
     void moveTape(int pos);// 移动输入纸带
     void moveWorkTape(int pos);// 移动工作纸带
     static void delay(int milliseconds);
     void Initial();// 初始化
     void restore();// 调用call还原
+    void updateline();//更新line
 
 private:
     enum State {

@@ -11,6 +11,13 @@ Recur_BinarySer::Recur_BinarySer() {
     target = 0;
 }
 
+void Recur_BinarySer::updatePara() {
+    steps = 0;
+    workSpace = 0;
+    state = READ_LOW;
+    target = 0;
+}
+
 int Recur_BinarySer::execute() {
     // 初始化指针
     int low = 0;
@@ -43,8 +50,9 @@ int Recur_BinarySer::execute() {
                 ui->output_process->setText("COMPARE_HIGH");
                 temp = ui->tape->item(0, 1)->text();
                 high = temp.toInt();
-                if (low <= high)
+                if (low <= high) {
                     state = CAI_MID;
+                }
                 else
                     state = STOP;
                 steps++; // 增加步数
@@ -53,8 +61,17 @@ int Recur_BinarySer::execute() {
             case CAI_MID:
                 ui->output_process->setText("CAI_MID");
                 mid = low + (high - low) / 2;
+                temp = "";
+                temp += "low:";
+                temp += QString::number(low);
+                temp += " high:";
+                temp += QString::number(high);
+                temp += " mid:";
+                temp += QString::number(mid);
+                ui->STACK->append(temp);
                 temp = QString::number(mid);
                 ui->workTape->setItem(0, workPos++, new QTableWidgetItem(temp));
+                updateline();
                 this->moveWorkTape(1);
                 this->start_posWorkTape = this->end_posWorkTape;
                 this->moveTape(mid + 2 - inputPos);
@@ -76,6 +93,11 @@ int Recur_BinarySer::execute() {
             case STOP:
                 ui->output_process->setText("STOP");
                 steps++; // 增加步数
+                temp = "";
+                temp += ui->tape->item(0, 0)->text();
+                temp += " ";
+                temp += ui->tape->item(0, 1)->text();
+                Stack.push(temp);
                 return -1;
 
             case COMPARE_MID:
@@ -114,14 +136,6 @@ int Recur_BinarySer::execute() {
 
             case CALL:
                 ui->output_process->setText("CALL");
-                temp = "";
-                temp += "low:";
-                temp += QString::number(low);
-                temp += " high:";
-                temp += QString::number(high);
-                temp += " mid:";
-                temp += QString::number(mid);
-                ui->STACK->append(temp);
                 //还原输入纸带
                 this->moveTape(0 - inputPos);
                 this->start_posTape = this->end_posTape;
@@ -138,6 +152,7 @@ int Recur_BinarySer::execute() {
                 ui->output_process->setText("SUCCESS");
                 steps++; // 增加步数
                 ui->steps->setText(QString::number(steps));
+                Stack.push(temp);
                 return mid; // 查找成功
         }
         Recur_BinarySer::delay(2000);
@@ -196,4 +211,11 @@ void Recur_BinarySer::restore() {
 
     auto item2 = new QTableWidgetItem("");
     ui->workTape->setItem(0, 0, item2);
+    updateline();
+}
+
+void Recur_BinarySer::updateline() {
+    QString WorkTape_line = "#work tape：";
+    WorkTape_line += " " + ui->workTape->item(0, 0)->text();
+    ui->work_tape_line->setText(WorkTape_line);
 }

@@ -83,6 +83,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/programing/CLionProjects/Turing Machine/include/DP_knap.h",
+			"MU",
+			"6YEA5652QU/moc_DP_knap.cpp",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/include/Inter_BinarySer.h",
 			"MU",
 			"6YEA5652QU/moc_Inter_BinarySer.cpp",
@@ -92,6 +98,12 @@
 			"D:/programing/CLionProjects/Turing Machine/include/Library.h",
 			"MU",
 			"6YEA5652QU/moc_Library.cpp",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/include/Memory_knap.h",
+			"MU",
+			"6YEA5652QU/moc_Memory_knap.cpp",
 			null
 		],
 		[
@@ -107,9 +119,21 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/include/knapsack.h",
+			"MU",
+			"6YEA5652QU/moc_knapsack.cpp",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/include/main_interface.h",
 			"MU",
 			"6YEA5652QU/moc_main_interface.cpp",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/include/recur_knapsack.h",
+			"MU",
+			"6YEA5652QU/moc_recur_knapsack.cpp",
 			null
 		],
 		[
@@ -172,12 +196,17 @@
 	[
 		[ "D:/programing/CLionProjects/Turing Machine/main.cpp", "MU", null ],
 		[
+			"D:/programing/CLionProjects/Turing Machine/src/DP_knap.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/src/Inter_BinarySer.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/programing/CLionProjects/Turing Machine/src/KnapsackTuring.cpp",
+			"D:/programing/CLionProjects/Turing Machine/src/Memory_knap.cpp",
 			"MU",
 			null
 		],
@@ -192,7 +221,17 @@
 			null
 		],
 		[
+			"D:/programing/CLionProjects/Turing Machine/src/knapsack.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/programing/CLionProjects/Turing Machine/src/main_interface.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/recur_knapsack.cpp",
 			"MU",
 			null
 		],

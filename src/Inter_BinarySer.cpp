@@ -11,14 +11,21 @@ Inter_BinarySer::Inter_BinarySer() {
     target = 0;
 }
 
+void Inter_BinarySer::updatePara() {
+    steps = 0;
+    workSpace = 0;
+    state = INIT_LOW;
+    target = 0;
+}
+
 int Inter_BinarySer::execute() {
     // 初始化指针
     int low = 0;
     int high = 0;
     int mid = 0;
     int work = 0;// 中间数
-    int worksteps = 0;// 工作纸带位置
-    int inputsteps = 0;// 输入纸带位置
+    int workPos = 0;// 工作纸带位置
+    int inputPos = 0;// 输入纸带位置
     QString temp = "";
     this->Initial();
 
@@ -34,7 +41,7 @@ int Inter_BinarySer::execute() {
                 work = temp.toInt();
                 this->moveTape(1);
                 this->start_posTape = this->end_posTape;
-                inputsteps++;
+                inputPos++;
                 state = WRITE_LOW;
                 break;
 
@@ -42,7 +49,8 @@ int Inter_BinarySer::execute() {
                 ui->output_process->setText("WRITE_LOW");
                 low = work;
                 temp = QString::number(low);
-                ui->workTape->setItem(0, worksteps++, new QTableWidgetItem(temp));
+                ui->workTape->setItem(0, workPos++, new QTableWidgetItem(temp));
+                updateline();
                 this->moveWorkTape(1);
                 this->start_posWorkTape = this->end_posWorkTape;
                 workSpace++;
@@ -55,7 +63,7 @@ int Inter_BinarySer::execute() {
                 work = temp.toInt();
                 this->moveTape(1);
                 this->start_posTape = this->end_posTape;
-                inputsteps++;
+                inputPos++;
                 state = WRITE_HIGH;
                 break;
 
@@ -63,9 +71,10 @@ int Inter_BinarySer::execute() {
                 ui->output_process->setText("WRITE_HIGH");
                 high = work;
                 temp = QString::number(high);
-                ui->workTape->setItem(0, worksteps--, new QTableWidgetItem(temp));
+                ui->workTape->setItem(0, workPos--, new QTableWidgetItem(temp));
                 this->moveWorkTape(-1);
                 this->start_posWorkTape = this->end_posWorkTape;
+                updateline();
                 workSpace++;
                 state = COMPARE_LOW;
                 break;
@@ -81,34 +90,37 @@ int Inter_BinarySer::execute() {
 
             case STOP:
                 ui->output_process->setText("STOP");
+                ui->output_tape_line->setText("#output tape：-1");
                 return -1; // 查找失败
 
             case CAI_MID:
                 ui->output_process->setText("CAI_MID");
                 mid = low + (high - low) / 2;
-                this->moveWorkTape(2 - worksteps);
+                this->moveWorkTape(2 - workPos);
                 this->start_posWorkTape = this->end_posWorkTape;
-                worksteps = 2;
+                workPos = 2;
                 temp = QString::number(mid);
-                ui->workTape->setItem(0, worksteps, new QTableWidgetItem(temp));
+                ui->workTape->setItem(0, workPos, new QTableWidgetItem(temp));
+                updateline();
                 workSpace = 3;
                 state = READ_MID;
                 break;
 
             case READ_MID:
                 ui->output_process->setText("READ_MID");
-                this->moveTape(mid + 2 - inputsteps);
+                this->moveTape(mid + 2 - inputPos);
                 this->start_posTape = this->end_posTape;
                 temp = ui->tape->item(0, mid + 2)->text();
                 work = temp.toInt();
-                inputsteps = mid + 2;
+                inputPos = mid + 2;
                 state = COMPARE_MID;
                 break;
 
             case COMPARE_MID:
                 ui->output_process->setText("COMPARE_MID");
-                this->moveTape(2 - inputsteps);
+                this->moveTape(2 - inputPos);
                 this->start_posTape = this->end_posTape;
+                inputPos = 2;
                 if (work == target) {
                     state = SUCCESS;
                 } else if (work < target) {
@@ -120,31 +132,34 @@ int Inter_BinarySer::execute() {
 
             case SUCCESS:
                 ui->output_process->setText("SUCCESS");
+                ui->output_tape_line->setText("#output tape：" + QString::number(mid));
                 return mid; // 查找成功
 
             case UPDATE_LOW:
                 ui->output_process->setText("UPDATE_LOW");
                 low = mid + 1;
-                worksteps = 0;
+                workPos = 0;
                 this->moveWorkTape(-2);
                 this->start_posWorkTape = this->end_posWorkTape;
                 temp = QString::number(low);
-                ui->workTape->setItem(0, worksteps, new QTableWidgetItem(temp));
+                ui->workTape->setItem(0, workPos, new QTableWidgetItem(temp));
+                updateline();
                 state = COMPARE_LOW;
                 break;
 
             case UPDATE_HIGH:
                 ui->output_process->setText("UPDATE_HIGH");
                 high = mid - 1;
-                worksteps = 1;
+                workPos = 1;
                 this->moveWorkTape(-1);
                 this->start_posWorkTape = this->end_posWorkTape;
                 temp = QString::number(high);
-                ui->workTape->setItem(0, worksteps, new QTableWidgetItem(temp));
+                ui->workTape->setItem(0, workPos, new QTableWidgetItem(temp));
+                updateline();
                 state = COMPARE_LOW;
                 break;
         }
-        this->delay(2000);
+        Inter_BinarySer::delay(2000);
     }
 }
 
@@ -164,9 +179,9 @@ void Inter_BinarySer::moveWorkTape(int pos) {
     Anima_work->start();
 }
 
-void Inter_BinarySer::delay(int milliseonds) {
+void Inter_BinarySer::delay(int milliseconds) {
     QEventLoop loop;
-    QTimer::singleShot(milliseonds, &loop, &QEventLoop::quit);
+    QTimer::singleShot(milliseconds, &loop, &QEventLoop::quit);
     loop.exec();
 }
 
@@ -184,8 +199,12 @@ void Inter_BinarySer::Initial() {
     start_posWorkTape = ui->workTape->geometry().topLeft();
 }
 
-void Inter_BinarySer::updateLine() {
-
+void Inter_BinarySer::updateline() {
+    QString WorkTape_line = "#work tape：";
+    for(int i = 0; i < ui->workTape->columnCount() ; i++) {
+        WorkTape_line += " " + ui->workTape->item(0, i)->text();
+    }
+    ui->work_tape_line->setText(WorkTape_line);
 }
 
 

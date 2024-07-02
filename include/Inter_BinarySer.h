@@ -6,21 +6,22 @@
 #define INTER_BINARYSER_H
 
 #include "Library.h"
-#include "../ui_turing.h"
+#include "../ui/ui_turing.h"
 
 using namespace std;
 
 
 class Inter_BinarySer {
 public:
-    Ui::Turing *ui;
+    Ui::Turing *ui{};
     Inter_BinarySer();
+    void updatePara();// 重复运行初始化参数
     int execute();// 运行主函数
     void moveTape(int pos);// 移动输入纸带
     void moveWorkTape(int pos);// 移动工作纸带
-    void delay(int milliseonds);
+    static void delay(int milliseconds);
     void Initial();// 初始化
-    void updateLine();// 更新
+    void updateline();//更新line
 
 private:
     enum State {

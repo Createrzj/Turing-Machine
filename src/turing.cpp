@@ -21,6 +21,7 @@ Turing::Turing(QWidget *parent) :
     connect(ui->Iterative_Binary_Search, SIGNAL(clicked(bool)), this, SLOT(BinarySearch_Iterative()));
     connect(ui->Recursive_Binary_Search, SIGNAL(clicked(bool)), this, SLOT(BinarySearch_Recursive()));
     connect(ui->restore, SIGNAL(clicked(bool)), this, SLOT(Restore()));
+    connect(ui->Return, SIGNAL(clicked(bool)), this, SLOT(returnMain()));
 
     ui->picture_turing->setPixmap(
             QPixmap(QString::fromUtf8("D:/programing/CLionProjects/Turing Machine/resources/turing_machine.png")));
@@ -47,6 +48,9 @@ Turing::Turing(QWidget *parent) :
     ui->workTape->setColumnWidth(0, 60);
     ui->workTape->setColumnWidth(1, 60);
     ui->workTape->setColumnWidth(2, 60);
+    ui->workTape->setItem(0, 0, new QTableWidgetItem(""));
+    ui->workTape->setItem(0, 1, new QTableWidgetItem(""));
+    ui->workTape->setItem(0, 2, new QTableWidgetItem(""));
     ui->workTape->verticalHeader()->setVisible(false);
     ui->workTape->horizontalHeader()->setVisible(false);
 
@@ -75,8 +79,10 @@ void Turing::BinarySearch_Iterative() {
     this->initTape();
     int result = Turing_BinarySer.execute();
     ui->output_Binary->setText(QString::number(result));
+    ui->output_tape_line->setText("#output tape：" + QString::number(result));
 }
 
+//递归二分搜索
 void Turing::BinarySearch_Recursive() {
     if (ui->input_BianrySer->text().isEmpty()) {
         QMessageBox::warning(this, "Warning!", "请输入目标序列!");
@@ -94,8 +100,7 @@ void Turing::BinarySearch_Recursive() {
     this->initTape();
     int result = Recyrsive_BinarySer.execute();
     ui->output_Binary->setText(QString::number(result));
-    QString output_line = ui->output_tape_line->text();
-    ui->output_tape_line->setText("#output tape：" + output_line);
+    ui->output_tape_line->setText("#output tape：" + QString::number(result));
 }
 
 // 快速排序之后数据转换为QStringList
@@ -131,12 +136,16 @@ void Turing::initTape() {
     ui->tape->setColumnWidth(2, TABLEWIDGET_WIDTH);
     ui->tape->setItem(0, 2, item3);
 
+    QString temp = "1 " + QString::number(size) + " " + ui->Target->text();
     for (int i = 3; i < size + 3; i++) {
+        temp += " ";
+        temp += this->Numbers[i - 3];
         auto item = new QTableWidgetItem(this->Numbers[i - 3]);
         item->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
         ui->tape->setColumnWidth(i, TABLEWIDGET_WIDTH);
         ui->tape->setItem(0, i, item);
     }
+    ui->input_tape_line->setText("#input tape：" + temp);
 }
 
 void Turing::Restore() {
@@ -146,22 +155,39 @@ void Turing::Restore() {
     ui->grids->clear();
     ui->output_Binary->clear();
     ui->STACK->clear();
-
+    //还原输入纸带位置
     Anima->setDuration(2000);
     Anima->setStartValue(ui->tape->geometry().topLeft());
     Anima->setEndValue(QPoint(405, 300));
     Anima->start();
-
+    //还原工作纸带位置
     Anima1->setDuration(2000);
     Anima1->setStartValue(ui->workTape->geometry().topLeft());
     Anima1->setEndValue(QPoint(405, 500));
     Anima1->start();
-
-    auto item1 = new QTableWidgetItem();
+    //更新工作纸带
+    auto item1 = new QTableWidgetItem("");
     ui->workTape->setItem(0, 0, item1);
-    auto item2 = new QTableWidgetItem();
+    auto item2 = new QTableWidgetItem("");
     ui->workTape->setItem(0, 1, item2);
-    auto item3 = new QTableWidgetItem();
+    auto item3 = new QTableWidgetItem("");
     ui->workTape->setItem(0, 2, item3);
+    // 更新line
+    ui->input_tape_line->setText("#input tape：");
+    ui->work_tape_line->setText("#work tape：");
+    ui->output_tape_line->setText("#output tape：");
+
+    for (int i = 0; i < ui->tape->columnCount(); i++) {
+        ui->tape->setItem(0, i, new QTableWidgetItem(""));
+    }
+
+    Turing_BinarySer.updatePara();
+    Recyrsive_BinarySer.updatePara();
+}
+
+void Turing::returnMain() {
+    Restore();
+    emit Show_Father_Widget();
+    this->close();
 }
 

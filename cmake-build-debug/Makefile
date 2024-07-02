@@ -189,6 +189,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/DP_knap.obj: src/DP_knap.cpp.obj
+.PHONY : src/DP_knap.obj
+
+# target to build an object file
+src/DP_knap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.obj
+.PHONY : src/DP_knap.cpp.obj
+
+src/DP_knap.i: src/DP_knap.cpp.i
+.PHONY : src/DP_knap.i
+
+# target to preprocess a source file
+src/DP_knap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.i
+.PHONY : src/DP_knap.cpp.i
+
+src/DP_knap.s: src/DP_knap.cpp.s
+.PHONY : src/DP_knap.s
+
+# target to generate assembly for a file
+src/DP_knap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.s
+.PHONY : src/DP_knap.cpp.s
+
 src/Inter_BinarySer.obj: src/Inter_BinarySer.cpp.obj
 .PHONY : src/Inter_BinarySer.obj
 
@@ -213,29 +237,29 @@ src/Inter_BinarySer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.s
 .PHONY : src/Inter_BinarySer.cpp.s
 
-src/KnapsackTuring.obj: src/KnapsackTuring.cpp.obj
-.PHONY : src/KnapsackTuring.obj
+src/Memory_knap.obj: src/Memory_knap.cpp.obj
+.PHONY : src/Memory_knap.obj
 
 # target to build an object file
-src/KnapsackTuring.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.obj
-.PHONY : src/KnapsackTuring.cpp.obj
+src/Memory_knap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj
+.PHONY : src/Memory_knap.cpp.obj
 
-src/KnapsackTuring.i: src/KnapsackTuring.cpp.i
-.PHONY : src/KnapsackTuring.i
+src/Memory_knap.i: src/Memory_knap.cpp.i
+.PHONY : src/Memory_knap.i
 
 # target to preprocess a source file
-src/KnapsackTuring.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.i
-.PHONY : src/KnapsackTuring.cpp.i
+src/Memory_knap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.i
+.PHONY : src/Memory_knap.cpp.i
 
-src/KnapsackTuring.s: src/KnapsackTuring.cpp.s
-.PHONY : src/KnapsackTuring.s
+src/Memory_knap.s: src/Memory_knap.cpp.s
+.PHONY : src/Memory_knap.s
 
 # target to generate assembly for a file
-src/KnapsackTuring.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/KnapsackTuring.cpp.s
-.PHONY : src/KnapsackTuring.cpp.s
+src/Memory_knap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.s
+.PHONY : src/Memory_knap.cpp.s
 
 src/QuickSort.obj: src/QuickSort.cpp.obj
 .PHONY : src/QuickSort.obj
@@ -285,6 +309,30 @@ src/Recur_BinarySer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.s
 .PHONY : src/Recur_BinarySer.cpp.s
 
+src/knapsack.obj: src/knapsack.cpp.obj
+.PHONY : src/knapsack.obj
+
+# target to build an object file
+src/knapsack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.obj
+.PHONY : src/knapsack.cpp.obj
+
+src/knapsack.i: src/knapsack.cpp.i
+.PHONY : src/knapsack.i
+
+# target to preprocess a source file
+src/knapsack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.i
+.PHONY : src/knapsack.cpp.i
+
+src/knapsack.s: src/knapsack.cpp.s
+.PHONY : src/knapsack.s
+
+# target to generate assembly for a file
+src/knapsack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.s
+.PHONY : src/knapsack.cpp.s
+
 src/main_interface.obj: src/main_interface.cpp.obj
 .PHONY : src/main_interface.obj
 
@@ -308,6 +356,30 @@ src/main_interface.s: src/main_interface.cpp.s
 src/main_interface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.s
 .PHONY : src/main_interface.cpp.s
+
+src/recur_knapsack.obj: src/recur_knapsack.cpp.obj
+.PHONY : src/recur_knapsack.obj
+
+# target to build an object file
+src/recur_knapsack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.obj
+.PHONY : src/recur_knapsack.cpp.obj
+
+src/recur_knapsack.i: src/recur_knapsack.cpp.i
+.PHONY : src/recur_knapsack.i
+
+# target to preprocess a source file
+src/recur_knapsack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.i
+.PHONY : src/recur_knapsack.cpp.i
+
+src/recur_knapsack.s: src/recur_knapsack.cpp.s
+.PHONY : src/recur_knapsack.s
+
+# target to generate assembly for a file
+src/recur_knapsack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.s
+.PHONY : src/recur_knapsack.cpp.s
 
 src/turing.obj: src/turing.cpp.obj
 .PHONY : src/turing.obj
@@ -349,21 +421,30 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/DP_knap.obj
+	@echo ... src/DP_knap.i
+	@echo ... src/DP_knap.s
 	@echo ... src/Inter_BinarySer.obj
 	@echo ... src/Inter_BinarySer.i
 	@echo ... src/Inter_BinarySer.s
-	@echo ... src/KnapsackTuring.obj
-	@echo ... src/KnapsackTuring.i
-	@echo ... src/KnapsackTuring.s
+	@echo ... src/Memory_knap.obj
+	@echo ... src/Memory_knap.i
+	@echo ... src/Memory_knap.s
 	@echo ... src/QuickSort.obj
 	@echo ... src/QuickSort.i
 	@echo ... src/QuickSort.s
 	@echo ... src/Recur_BinarySer.obj
 	@echo ... src/Recur_BinarySer.i
 	@echo ... src/Recur_BinarySer.s
+	@echo ... src/knapsack.obj
+	@echo ... src/knapsack.i
+	@echo ... src/knapsack.s
 	@echo ... src/main_interface.obj
 	@echo ... src/main_interface.i
 	@echo ... src/main_interface.s
+	@echo ... src/recur_knapsack.obj
+	@echo ... src/recur_knapsack.i
+	@echo ... src/recur_knapsack.s
 	@echo ... src/turing.obj
 	@echo ... src/turing.i
 	@echo ... src/turing.s

@@ -17,7 +17,7 @@ find_package(Qt5 COMPONENTS
 add_executable(Turing_Machine main.cpp
         src/turing.cpp
         include/turing.h
-        turing.ui
+        ui/turing.ui
         src/QuickSort.cpp
         include/QuickSort.h
         include/Library.h
@@ -25,9 +25,19 @@ add_executable(Turing_Machine main.cpp
         src/Inter_BinarySer.cpp
         src/main_interface.cpp
         include/main_interface.h
-        main_interface.ui
+        ui/main_interface.ui
         src/Recur_BinarySer.cpp
         include/Recur_BinarySer.h
+        src/knapsack.cpp
+        include/knapsack.h
+        ui/knapsack.ui
+        src/DP_knap.cpp
+        include/DP_knap.h
+        src/Memory_knap.cpp
+        include/Memory_knap.h
+        src/recur_knapsack.cpp
+        include/recur_knapsack.h
+        ui/recur_knapsack.ui
 )
 target_link_libraries(Turing_Machine
         Qt5::Core
