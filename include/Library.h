@@ -20,6 +20,8 @@
 #include <QSequentialAnimationGroup>
 #include <QEventLoop>
 #include <QStack>
+#include <stack>
+#include <queue>
 #include <algorithm>
 
 #define TABLEWIDGET_WIDTH 60

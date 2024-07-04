@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/programing/CLionProjects/Turing Machine/BackTrack.cpp" "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/main.cpp" "CMakeFiles/Turing_Machine.dir/main.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/main.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/BB_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/BackTrack_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/DP_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/Inter_BinarySer.cpp" "CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/Inter_BinarySer.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/Memory_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj.d"

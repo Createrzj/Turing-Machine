@@ -52,8 +52,7 @@ int Recur_BinarySer::execute() {
                 high = temp.toInt();
                 if (low <= high) {
                     state = CAI_MID;
-                }
-                else
+                } else
                     state = STOP;
                 steps++; // 增加步数
                 break;
@@ -92,12 +91,12 @@ int Recur_BinarySer::execute() {
 
             case STOP:
                 ui->output_process->setText("STOP");
-                steps++; // 增加步数
                 temp = "";
                 temp += ui->tape->item(0, 0)->text();
                 temp += " ";
                 temp += ui->tape->item(0, 1)->text();
                 Stack.push(temp);
+                popStack();
                 return -1;
 
             case COMPARE_MID:
@@ -153,6 +152,7 @@ int Recur_BinarySer::execute() {
                 steps++; // 增加步数
                 ui->steps->setText(QString::number(steps));
                 Stack.push(temp);
+                popStack();
                 return mid; // 查找成功
         }
         Recur_BinarySer::delay(2000);
@@ -218,4 +218,15 @@ void Recur_BinarySer::updateline() {
     QString WorkTape_line = "#work tape：";
     WorkTape_line += " " + ui->workTape->item(0, 0)->text();
     ui->work_tape_line->setText(WorkTape_line);
+}
+
+void Recur_BinarySer::popStack() {
+    QString text = ui->STACK->toPlainText();
+    QStringList lines = text.split('\n', QString::SkipEmptyParts);
+    for (int i = lines.size() - 1; i >= 0; i--) {
+        lines.removeAt(i);
+        text = lines.join("\n");
+        ui->STACK->setPlainText(text);
+        delay(2000);
+    }
 }

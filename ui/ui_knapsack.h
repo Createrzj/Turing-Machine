@@ -33,15 +33,12 @@ public:
     QLabel *label_2;
     QTableWidget *inputTape;
     QLineEdit *grids;
-    QLineEdit *output_tape_line;
     QLineEdit *steps;
     QLineEdit *output_process;
     QLabel *picture_turing;
     QTableWidget *workTape;
-    QLineEdit *input_tape_line;
     QLabel *picture_arrowhead;
     QLabel *picture_turing_2;
-    QLineEdit *work_tape_line;
     QLabel *picture_arrowhead_2;
     QTableWidget *outputTape;
     QLabel *picture_arrowhead_3;
@@ -49,14 +46,15 @@ public:
     QLineEdit *max_value;
     QLabel *label_3;
     QLabel *label_4;
+    QPushButton *BB;
 
     void setupUi(QWidget *Knapsack)
     {
         if (Knapsack->objectName().isEmpty())
             Knapsack->setObjectName(QString::fromUtf8("Knapsack"));
-        Knapsack->resize(1200, 800);
-        Knapsack->setMinimumSize(QSize(1200, 800));
-        Knapsack->setMaximumSize(QSize(1200, 800));
+        Knapsack->resize(1500, 800);
+        Knapsack->setMinimumSize(QSize(1500, 800));
+        Knapsack->setMaximumSize(QSize(1500, 800));
         DP = new QPushButton(Knapsack);
         DP->setObjectName(QString::fromUtf8("DP"));
         DP->setGeometry(QRect(60, 60, 171, 41));
@@ -73,7 +71,7 @@ public:
 "}"));
         restore = new QPushButton(Knapsack);
         restore->setObjectName(QString::fromUtf8("restore"));
-        restore->setGeometry(QRect(340, 60, 171, 41));
+        restore->setGeometry(QRect(520, 60, 171, 41));
         restore->setFont(font);
         restore->setStyleSheet(QString::fromUtf8("QPushButton\n"
 "{\n"
@@ -156,14 +154,6 @@ public:
 "border:2px solid black\n"
 "}"));
         grids->setAlignment(Qt::AlignCenter);
-        output_tape_line = new QLineEdit(Knapsack);
-        output_tape_line->setObjectName(QString::fromUtf8("output_tape_line"));
-        output_tape_line->setGeometry(QRect(10, 730, 381, 41));
-        output_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
-"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
-"\n"
-"}"));
-        output_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         steps = new QLineEdit(Knapsack);
         steps->setObjectName(QString::fromUtf8("steps"));
         steps->setGeometry(QRect(40, 220, 121, 41));
@@ -193,14 +183,6 @@ public:
         workTape->setGeometry(QRect(635, 500, 301, 51));
         workTape->setFont(font2);
         workTape->setStyleSheet(QString::fromUtf8(""));
-        input_tape_line = new QLineEdit(Knapsack);
-        input_tape_line->setObjectName(QString::fromUtf8("input_tape_line"));
-        input_tape_line->setGeometry(QRect(10, 610, 381, 41));
-        input_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
-"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
-"\n"
-"}"));
-        input_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         picture_arrowhead = new QLabel(Knapsack);
         picture_arrowhead->setObjectName(QString::fromUtf8("picture_arrowhead"));
         picture_arrowhead->setGeometry(QRect(650, 260, 30, 40));
@@ -213,14 +195,6 @@ public:
 "border:2px solid white\n"
 "}"));
         picture_turing_2->setScaledContents(true);
-        work_tape_line = new QLineEdit(Knapsack);
-        work_tape_line->setObjectName(QString::fromUtf8("work_tape_line"));
-        work_tape_line->setGeometry(QRect(10, 670, 381, 41));
-        work_tape_line->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
-"font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
-"\n"
-"}"));
-        work_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         picture_arrowhead_2 = new QLabel(Knapsack);
         picture_arrowhead_2->setObjectName(QString::fromUtf8("picture_arrowhead_2"));
         picture_arrowhead_2->setGeometry(QRect(650, 460, 30, 40));
@@ -267,6 +241,14 @@ public:
         font3.setPointSize(12);
         label_4->setFont(font3);
         label_4->setAlignment(Qt::AlignCenter);
+        BB = new QPushButton(Knapsack);
+        BB->setObjectName(QString::fromUtf8("BB"));
+        BB->setGeometry(QRect(290, 60, 171, 41));
+        BB->setFont(font);
+        BB->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"}"));
 
         retranslateUi(Knapsack);
 
@@ -288,20 +270,11 @@ public:
         label_2->setText(QCoreApplication::translate("Knapsack", "\345\267\245\344\275\234\347\272\270\345\270\246\347\251\272\351\227\264", nullptr));
         grids->setText(QString());
         grids->setPlaceholderText(QCoreApplication::translate("Knapsack", "grids", nullptr));
-        output_tape_line->setInputMask(QString());
-        output_tape_line->setText(QCoreApplication::translate("Knapsack", "#outputput tape\357\274\232", nullptr));
-        output_tape_line->setPlaceholderText(QString());
         steps->setText(QString());
         steps->setPlaceholderText(QCoreApplication::translate("Knapsack", "Steps", nullptr));
         picture_turing->setText(QString());
-        input_tape_line->setInputMask(QString());
-        input_tape_line->setText(QCoreApplication::translate("Knapsack", "#input tape\357\274\232", nullptr));
-        input_tape_line->setPlaceholderText(QString());
         picture_arrowhead->setText(QString());
         picture_turing_2->setText(QString());
-        work_tape_line->setInputMask(QString());
-        work_tape_line->setText(QCoreApplication::translate("Knapsack", "#work tape\357\274\232", nullptr));
-        work_tape_line->setPlaceholderText(QString());
         picture_arrowhead_2->setText(QString());
         picture_arrowhead_3->setText(QString());
         picture_turing_3->setText(QString());
@@ -309,6 +282,7 @@ public:
         max_value->setPlaceholderText(QCoreApplication::translate("Knapsack", "max_value", nullptr));
         label_3->setText(QCoreApplication::translate("Knapsack", "\346\234\200\345\244\247\344\273\267\345\200\274", nullptr));
         label_4->setText(QCoreApplication::translate("Knapsack", "\345\233\276\347\201\265\346\234\2720-1\350\203\214\345\214\205\351\227\256\351\242\230", nullptr));
+        BB->setText(QCoreApplication::translate("Knapsack", "\345\210\206\346\224\257\347\225\214\351\231\220", nullptr));
     } // retranslateUi
 
 };

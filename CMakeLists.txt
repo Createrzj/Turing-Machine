@@ -38,6 +38,11 @@ add_executable(Turing_Machine main.cpp
         src/recur_knapsack.cpp
         include/recur_knapsack.h
         ui/recur_knapsack.ui
+        src/BB_knap.cpp
+        include/BB_knap.h
+        BackTrack.cpp
+        src/BackTrack_knap.cpp
+        include/BackTrack_knap.h
 )
 target_link_libraries(Turing_Machine
         Qt5::Core

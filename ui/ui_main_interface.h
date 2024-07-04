@@ -21,6 +21,7 @@ class Ui_Main_Interface
 public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
 
     void setupUi(QWidget *Main_Interface)
     {
@@ -39,6 +40,12 @@ public:
         pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "	font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "}"));
+        pushButton_3 = new QPushButton(Main_Interface);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(330, 390, 211, 51));
+        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"	font: 12pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
+"}"));
 
         retranslateUi(Main_Interface);
 
@@ -49,7 +56,8 @@ public:
     {
         Main_Interface->setWindowTitle(QCoreApplication::translate("Main_Interface", "Main_Interface", nullptr));
         pushButton->setText(QCoreApplication::translate("Main_Interface", "\344\272\214\345\210\206\346\220\234\347\264\242", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("Main_Interface", "0-1\350\203\214\345\214\205\345\212\250\346\200\201\350\247\204\345\210\222", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("Main_Interface", "\345\233\276\347\201\265\346\234\2720-1\350\203\214\345\214\205", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("Main_Interface", "\351\200\222\345\275\2220-1\350\203\214\345\214\205", nullptr));
     } // retranslateUi
 
 };

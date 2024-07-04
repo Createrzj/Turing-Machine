@@ -12,6 +12,7 @@ Knapsack::Knapsack(QWidget *parent) :
 
     this->Numbers = QStringList();
     dpKnap.ui = ui;
+    bbKnap.ui = ui;
     Anima->setTargetObject(ui->inputTape);
     Anima->setPropertyName("pos");
     Anima1->setTargetObject(ui->workTape);
@@ -20,6 +21,9 @@ Knapsack::Knapsack(QWidget *parent) :
     Anima2->setPropertyName("pos");
     //按钮信号连接
     connect(ui->DP, SIGNAL(clicked(bool)), this, SLOT(Knapsack_DP()));
+    connect(ui->BB, SIGNAL(clicked(bool)), this, SLOT(Knapsack_BB()));
+    connect(ui->restore, SIGNAL(clicked(bool)), this, SLOT(Restore()));
+    connect(ui->Return, SIGNAL(clicked(bool)), this, SLOT(returnMain()));
 
     ui->picture_turing->setPixmap(
             QPixmap(QString::fromUtf8("D:/programing/CLionProjects/Turing Machine/resources/turing_machine.png")));
@@ -81,6 +85,26 @@ void Knapsack::Knapsack_DP() {
     ui->max_value->setText(QString::number(result));
 }
 
+void Knapsack::Knapsack_BB() {
+    if (ui->input_Knap->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入目标序列!");
+        return;
+    }
+    if (ui->input_Capacity->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入总承重!");
+        return;
+    }
+    if (ui->input_Num->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入物体数量!");
+        return;
+    }
+    this->Numbers.clear();
+    this->GetInput();
+    this->initTape();
+    float result = bbKnap.execute();
+    ui->max_value->setText(QString::number(result));
+}
+
 void Knapsack::GetInput() {
     Numbers.append(ui->input_Capacity->text());
     Numbers.append(ui->input_Num->text());
@@ -130,4 +154,51 @@ void Knapsack::initTape() {
         ui->workTape->setColumnWidth(i, TABLEWIDGET_WIDTH);
         ui->workTape->setItem(0, i, item);
     }
+}
+
+void Knapsack::Restore() {
+    ui->input_Knap->clear();
+    ui->input_Capacity->clear();
+    ui->input_Num->clear();
+    ui->steps->clear();
+    ui->grids->clear();
+    ui->output_process->clear();
+    ui->max_value->clear();
+    //还原输入纸带位置
+    Anima->setDuration(2000);
+    Anima->setStartValue(ui->inputTape->geometry().topLeft());
+    Anima->setEndValue(QPoint(635, 300));
+    Anima->start();
+    //还原工作纸带位置
+    Anima1->setDuration(2000);
+    Anima1->setStartValue(ui->workTape->geometry().topLeft());
+    Anima1->setEndValue(QPoint(635, 500));
+    Anima1->start();
+    //还原输出纸带位置
+    Anima2->setDuration(2000);
+    Anima2->setStartValue(ui->outputTape->geometry().topLeft());
+    Anima2->setEndValue(QPoint(635, 690));
+    Anima2->start();
+
+    //更新输入纸带
+    for (int i = 0; i < ui->inputTape->columnCount(); i++) {
+        ui->inputTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+    //更新工作纸带
+    for (int i = 0; i < ui->workTape->columnCount(); i++) {
+        ui->workTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+    //更新输出纸带
+    for (int i = 0; i < ui->outputTape->columnCount(); i++) {
+        ui->outputTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+
+    dpKnap.updatePara();
+    bbKnap.updatePara();
+}
+
+void Knapsack::returnMain() {
+    Restore();
+    emit Show_Father_Widget();
+    this->close();
 }

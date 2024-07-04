@@ -96,10 +96,12 @@ void Memory_knap::execute() {
                     break;
                 case PUSH_STACK_1:
                     pushstack_1();
+                    steps--;
                     flag = 0;
                     break;
                 case PUSH_STACK_2:
                     pushstack_2();
+                    steps--;
                     flag = 0;
                     break;
                 case WRITE_MAX:

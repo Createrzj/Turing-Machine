@@ -8,6 +8,7 @@
 #include "Library.h"
 #include "../ui/ui_recur_knapsack.h"
 #include "Memory_knap.h"
+#include "BackTrack_knap.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class recur_knapsack; }
@@ -20,6 +21,7 @@ public:
     explicit recur_knapsack(QWidget *parent = nullptr);
     ~recur_knapsack() override;
     Memory_knap m_recur_knapsack;// 备忘录0-1背包
+    BackTrack_knap backtrack_knap;// 回溯0-1背包
 
 private:
     Ui::recur_knapsack *ui;
@@ -33,6 +35,11 @@ private:
 
 public slots:
     void Knapsack_memory();//备忘录
+    void Knapsack_backtrack();// 回溯
+    void returnMain();//返回主界面
+
+signals:
+    void Show_Father_Widget();
 };
 
 

@@ -18,6 +18,10 @@ public:
 
     int partition(QVector<int> &arr, int low, int high);
 
+    void quickSortf(QVector<float> &arr, int low, int high);
+
+    int partitionf(QVector<float> &arr, int low, int high);
+
 private:
 
 };

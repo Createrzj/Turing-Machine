@@ -13,6 +13,7 @@ recur_knapsack::recur_knapsack(QWidget *parent) :
     this->Numbers = QStringList();
 
     m_recur_knapsack.ui = ui;
+    backtrack_knap.ui = ui;
     Anima_input->setTargetObject(ui->inputTape);
     Anima_input->setPropertyName("pos");
     Anima_work->setTargetObject(ui->workTape);
@@ -21,6 +22,8 @@ recur_knapsack::recur_knapsack(QWidget *parent) :
     Anima_output->setPropertyName("pos");
     //按钮信号连接
     connect(ui->memory_knap, SIGNAL(clicked(bool)), this, SLOT(Knapsack_memory()));
+    connect(ui->backtrack_knap, SIGNAL(clicked(bool)), this, SLOT(Knapsack_backtrack()));
+    connect(ui->return_main, SIGNAL(clicked(bool)), this, SLOT(returnMain()));
 
     ui->picture_turing->setPixmap(
             QPixmap(QString::fromUtf8("D:/programing/CLionProjects/Turing Machine/resources/turing_machine.png")));
@@ -55,8 +58,6 @@ recur_knapsack::recur_knapsack(QWidget *parent) :
     ui->outputTape->setFixedWidth(TABLEWIDGET_WIDTH * (TABLEWIDGET_INIT_SIZE + 1));
     ui->outputTape->verticalHeader()->setVisible(false);
     ui->outputTape->horizontalHeader()->setVisible(false);
-
-
 }
 
 recur_knapsack::~recur_knapsack() {
@@ -80,6 +81,25 @@ void recur_knapsack::Knapsack_memory() {
     this->GetInput();
     this->initTape();
     m_recur_knapsack.START();
+}
+
+void recur_knapsack::Knapsack_backtrack() {
+    if (ui->input_Knap->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入目标序列!");
+        return;
+    }
+    if (ui->input_Capacity->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入总承重!");
+        return;
+    }
+    if (ui->input_Num->text().isEmpty()) {
+        QMessageBox::warning(this, "Warning!", "请输入物体数量!");
+        return;
+    }
+    this->Numbers.clear();
+    this->GetInput();
+    this->initTape();
+    backtrack_knap.execute();
 }
 
 void recur_knapsack::GetInput() {
@@ -139,4 +159,10 @@ void recur_knapsack::initTape() {
             ui->workTape->setItem(0, i, item);
         }
     }
+}
+
+void recur_knapsack::returnMain() {
+//    Restore();
+    emit Show_Father_Widget();
+    this->close();
 }

@@ -12,6 +12,7 @@ class DP_knap {
 public:
     Ui::Knapsack *ui{};
     DP_knap();
+    void updatePara();// 重复运行初始化参数
     int execute();
     void readValue();
     void readWeight();

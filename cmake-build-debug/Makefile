@@ -141,6 +141,30 @@ Turing_Machine_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine_autogen.dir\build.make CMakeFiles/Turing_Machine_autogen.dir/build
 .PHONY : Turing_Machine_autogen/fast
 
+BackTrack.obj: BackTrack.cpp.obj
+.PHONY : BackTrack.obj
+
+# target to build an object file
+BackTrack.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj
+.PHONY : BackTrack.cpp.obj
+
+BackTrack.i: BackTrack.cpp.i
+.PHONY : BackTrack.i
+
+# target to preprocess a source file
+BackTrack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.i
+.PHONY : BackTrack.cpp.i
+
+BackTrack.s: BackTrack.cpp.s
+.PHONY : BackTrack.s
+
+# target to generate assembly for a file
+BackTrack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.s
+.PHONY : BackTrack.cpp.s
+
 Turing_Machine_autogen/mocs_compilation.obj: Turing_Machine_autogen/mocs_compilation.cpp.obj
 .PHONY : Turing_Machine_autogen/mocs_compilation.obj
 
@@ -188,6 +212,54 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/BB_knap.obj: src/BB_knap.cpp.obj
+.PHONY : src/BB_knap.obj
+
+# target to build an object file
+src/BB_knap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj
+.PHONY : src/BB_knap.cpp.obj
+
+src/BB_knap.i: src/BB_knap.cpp.i
+.PHONY : src/BB_knap.i
+
+# target to preprocess a source file
+src/BB_knap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.i
+.PHONY : src/BB_knap.cpp.i
+
+src/BB_knap.s: src/BB_knap.cpp.s
+.PHONY : src/BB_knap.s
+
+# target to generate assembly for a file
+src/BB_knap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.s
+.PHONY : src/BB_knap.cpp.s
+
+src/BackTrack_knap.obj: src/BackTrack_knap.cpp.obj
+.PHONY : src/BackTrack_knap.obj
+
+# target to build an object file
+src/BackTrack_knap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj
+.PHONY : src/BackTrack_knap.cpp.obj
+
+src/BackTrack_knap.i: src/BackTrack_knap.cpp.i
+.PHONY : src/BackTrack_knap.i
+
+# target to preprocess a source file
+src/BackTrack_knap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.i
+.PHONY : src/BackTrack_knap.cpp.i
+
+src/BackTrack_knap.s: src/BackTrack_knap.cpp.s
+.PHONY : src/BackTrack_knap.s
+
+# target to generate assembly for a file
+src/BackTrack_knap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.s
+.PHONY : src/BackTrack_knap.cpp.s
 
 src/DP_knap.obj: src/DP_knap.cpp.obj
 .PHONY : src/DP_knap.obj
@@ -415,12 +487,21 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Turing_Machine_autogen
 	@echo ... Turing_Machine
+	@echo ... BackTrack.obj
+	@echo ... BackTrack.i
+	@echo ... BackTrack.s
 	@echo ... Turing_Machine_autogen/mocs_compilation.obj
 	@echo ... Turing_Machine_autogen/mocs_compilation.i
 	@echo ... Turing_Machine_autogen/mocs_compilation.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/BB_knap.obj
+	@echo ... src/BB_knap.i
+	@echo ... src/BB_knap.s
+	@echo ... src/BackTrack_knap.obj
+	@echo ... src/BackTrack_knap.i
+	@echo ... src/BackTrack_knap.s
 	@echo ... src/DP_knap.obj
 	@echo ... src/DP_knap.i
 	@echo ... src/DP_knap.s

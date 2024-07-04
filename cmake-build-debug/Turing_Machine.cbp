@@ -110,6 +110,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/BackTrack.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/BackTrack.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui/ui_knapsack.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
@@ -123,6 +129,12 @@
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/BB_knap.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/BackTrack_knap.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/DP_knap.h">
@@ -156,6 +168,12 @@
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/main.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/BB_knap.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/BackTrack_knap.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/DP_knap.cpp">

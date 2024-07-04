@@ -26,6 +26,28 @@ DP_knap::DP_knap() {
     workspace = 0;
 }
 
+void DP_knap::updatePara() {
+    state = READ_CAPACITY;
+    steps = 0;
+    capacity = 0;
+    temp = "";
+    inputPos = 0;
+    workPos = 0;
+    outputPos = 0;
+    numItems = 0;
+    current_weight = 0;
+    current_value = 0;
+    current_flag = 0;
+    index_items = 0;
+    index_cap = 0;
+    workPos = 0;
+    L1 = 0;
+    L2 = 0;
+    MAX = 0;
+    flag = 0;
+    workspace = 0;
+}
+
 void DP_knap::moveTape(int pos) {
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
     Anima->setDuration(100);
@@ -307,6 +329,30 @@ void DP_knap::getresult() {
 }
 
 void DP_knap::Initial() {
+    temp = ui->input_Num->text();
+    int size_output = temp.toInt();
+    ui->workTape->setColumnCount(size_output);
+    ui->workTape->setRowHeight(0, TABLEWIDGET_HEIGHT);
+    ui->workTape->setFixedWidth((size_output + 1) * TABLEWIDGET_WIDTH);
+    for (int i = 0; i < size_output; i++) {
+        auto item = new QTableWidgetItem("0");
+        item->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+        ui->workTape->setColumnWidth(i, TABLEWIDGET_WIDTH);
+        ui->workTape->setItem(0, i, item);
+    }
+
+    temp = ui->input_Capacity->text();
+    int size_work = (temp.toInt()+1) * size_output;
+    ui->workTape->setColumnCount(size_work);
+    ui->workTape->setRowHeight(0, TABLEWIDGET_HEIGHT);
+    ui->workTape->setFixedWidth((size_work + 1) * TABLEWIDGET_WIDTH);
+    for (int i = 0; i < size_work; i++) {
+        auto item = new QTableWidgetItem("");
+        item->setTextAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
+        ui->workTape->setColumnWidth(i, TABLEWIDGET_WIDTH);
+        ui->workTape->setItem(0, i, item);
+    }
+
     Anima->setTargetObject(ui->inputTape);
     Anima->setPropertyName("pos");
 
@@ -320,4 +366,5 @@ void DP_knap::Initial() {
     start_posWorkTape = ui->workTape->geometry().topLeft();
     start_posOutputTape = ui->outputTape->geometry().topLeft();
 }
+
 

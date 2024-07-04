@@ -54,9 +54,9 @@ public:
     {
         if (recur_knapsack->objectName().isEmpty())
             recur_knapsack->setObjectName(QString::fromUtf8("recur_knapsack"));
-        recur_knapsack->resize(1200, 1000);
+        recur_knapsack->resize(1970, 1000);
         recur_knapsack->setMinimumSize(QSize(1200, 1000));
-        recur_knapsack->setMaximumSize(QSize(1200, 1000));
+        recur_knapsack->setMaximumSize(QSize(999999, 1000));
         memory_knap = new QPushButton(recur_knapsack);
         memory_knap->setObjectName(QString::fromUtf8("memory_knap"));
         memory_knap->setGeometry(QRect(40, 50, 201, 41));

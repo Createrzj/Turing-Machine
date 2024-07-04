@@ -20,6 +20,7 @@ public:
     void Initial();// 初始化
     void restore();// 调用call还原
     void updateline();//更新line
+    void popStack();//弹栈
 
 private:
     enum State {

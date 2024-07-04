@@ -7,6 +7,7 @@
 
 #include "Library.h"
 #include "DP_knap.h"
+#include "BB_knap.h"
 #include "../ui/ui_knapsack.h"
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,7 @@ public:
     explicit Knapsack(QWidget *parent = nullptr);
     ~Knapsack() override;
     DP_knap dpKnap;//0-1背包动态规划
+    BB_knap bbKnap;// 0-1背包分支界限
 
 private:
     Ui::Knapsack *ui;
@@ -34,6 +36,12 @@ private:
 
 public slots:
     void Knapsack_DP();// 动态规划
+    void Knapsack_BB();// 分支界限
+    void Restore();// 重置
+    void returnMain();//返回主界面
+
+signals:
+    void Show_Father_Widget();
 };
 
 

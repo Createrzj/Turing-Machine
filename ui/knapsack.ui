@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
+    <width>1500</width>
     <height>800</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
+    <width>1500</width>
     <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
+    <width>1500</width>
     <height>800</height>
    </size>
   </property>
@@ -56,7 +56,7 @@
   <widget class="QPushButton" name="restore">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>520</x>
      <y>60</y>
      <width>171</width>
      <height>41</height>
@@ -294,34 +294,6 @@ border:2px solid black
     <string>grids</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="output_tape_line">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>730</y>
-     <width>381</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit{
-font: 12pt &quot;华文楷体&quot;;
-
-}</string>
-   </property>
-   <property name="inputMask">
-    <string/>
-   </property>
-   <property name="text">
-    <string extracomment="二分搜索，请输入初始序列">#outputput tape：</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="steps">
    <property name="geometry">
     <rect>
@@ -416,34 +388,6 @@ border:2px solid white
     <string notr="true"/>
    </property>
   </widget>
-  <widget class="QLineEdit" name="input_tape_line">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>610</y>
-     <width>381</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit{
-font: 12pt &quot;华文楷体&quot;;
-
-}</string>
-   </property>
-   <property name="inputMask">
-    <string/>
-   </property>
-   <property name="text">
-    <string extracomment="二分搜索，请输入初始序列">#input tape：</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="picture_arrowhead">
    <property name="geometry">
     <rect>
@@ -482,34 +426,6 @@ border:2px solid white
    </property>
    <property name="scaledContents">
     <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="work_tape_line">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>670</y>
-     <width>381</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QLineEdit{
-font: 12pt &quot;华文楷体&quot;;
-
-}</string>
-   </property>
-   <property name="inputMask">
-    <string/>
-   </property>
-   <property name="text">
-    <string extracomment="二分搜索，请输入初始序列">#work tape：</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-   </property>
-   <property name="placeholderText">
-    <string/>
    </property>
   </widget>
   <widget class="QLabel" name="picture_arrowhead_2">
@@ -666,6 +582,34 @@ font: 15pt &quot;华文楷体&quot;;
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BB">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>60</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>华文楷体</family>
+     <pointsize>11</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	font: 11pt &quot;华文楷体&quot;;
+}</string>
+   </property>
+   <property name="text">
+    <string>分支界限</string>
    </property>
   </widget>
  </widget>
