@@ -110,10 +110,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/BackTrack.cpp">
-			<Option target="Turing_Machine"/>
-		</Unit>
-		<Unit filename="D:/programing/CLionProjects/Turing Machine/BackTrack.h">
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui/ui_dp_table.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/include/ui/ui_knapsack.h">
@@ -155,6 +152,9 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/Recur_BinarySer.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/dp_table.h">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/include/knapsack.h">
 			<Option target="Turing_Machine"/>
 		</Unit>
@@ -191,6 +191,9 @@
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/dp_table.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/knapsack.cpp">
 			<Option target="Turing_Machine"/>
 		</Unit>
@@ -201,6 +204,9 @@
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/src/turing.cpp">
+			<Option target="Turing_Machine"/>
+		</Unit>
+		<Unit filename="D:/programing/CLionProjects/Turing Machine/ui/dp_table.ui">
 			<Option target="Turing_Machine"/>
 		</Unit>
 		<Unit filename="D:/programing/CLionProjects/Turing Machine/ui/knapsack.ui">

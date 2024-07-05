@@ -15,6 +15,17 @@ Memory_knap::Memory_knap() {
     temp = "";
 }
 
+void Memory_knap::updatePara() {
+    steps = 0;
+    workspace = 0;
+    capacity = 0;
+    numItems = 0;
+    inputPos = 0;
+    workPos = 0;
+    outputPos = 0;
+    temp = "";
+}
+
 void Memory_knap::START() {
     execute();
     getMax();
@@ -23,24 +34,30 @@ void Memory_knap::START() {
 }
 
 void Memory_knap::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima_input->setDuration(100);
+    Anima_input->setDuration(abs(pos) * SPEED);
     Anima_input->setStartValue(this->start_posTape);
     Anima_input->setEndValue(this->end_posTape);
     Anima_input->start();
 }
 
 void Memory_knap::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(100);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
 }
 
 void Memory_knap::moveOutputTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posOutputTape = QPoint(start_posOutputTape.x() - TABLEWIDGET_WIDTH * pos, start_posOutputTape.y());
-    Anima_output->setDuration(100);
+    Anima_output->setDuration(abs(pos) * SPEED);
     Anima_output->setStartValue(this->start_posOutputTape);
     Anima_output->setEndValue(this->end_posOutputTape);
     Anima_output->start();
@@ -53,6 +70,7 @@ void Memory_knap::delay(int milliseconds) {
 }
 
 void Memory_knap::Initial() {
+    SPEED = ui->horizontalSlider->value();
     Anima_input->setTargetObject(ui->inputTape);
     Anima_input->setPropertyName("pos");
 
@@ -65,6 +83,7 @@ void Memory_knap::Initial() {
     start_posTape = ui->inputTape->geometry().topLeft();
     start_posWorkTape = ui->workTape->geometry().topLeft();
     start_posOutputTape = ui->outputTape->geometry().topLeft();
+    work_stack.clear();
     work_stack.push({ui->inputTape->item(0, 0)->text().toInt(),
                      ui->inputTape->item(0, 1)->text().toInt(),
                      READ_CAPACITY});
@@ -76,6 +95,7 @@ void Memory_knap::execute() {
         steps++;
         frame = work_stack.top();
         work_stack.pop();
+        popStack();
         ui->steps->setText(QString::number(steps));
         int flag = 1;
         while (flag != 0) {
@@ -108,11 +128,13 @@ void Memory_knap::execute() {
                     flag = 0;
                     writeMax();
                     break;
+                case WRITE_MAX2:
+                    flag = 0;
+                    writeMax2();
                 case END:
                     flag = 0;
             }
         }
-        delay(100);
     }
 }
 
@@ -164,6 +186,8 @@ void Memory_knap::writeMemo() {
     this->start_posWorkTape = this->end_posWorkTape;
     ui->workTape->setItem(0, index, new QTableWidgetItem("0"));
     workPos = index;
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
 }
 
 void Memory_knap::compareWig() {
@@ -188,15 +212,33 @@ void Memory_knap::readWig() {
 
 void Memory_knap::pushstack_1() {
     ui->output_process->setText("pushstack_1");
-    work_stack.push_back({frame.cap, frame.n - 1, READ_MEMO});//不取
+    QString text = "";
+    work_stack.push_back({frame.cap, frame.n, WRITE_MAX2});//合并问题
+    text = "cap:" + QString::number(frame.cap) + " " +
+           "n:" + QString::number(frame.n);
+    ui->STACK->append(text);
+    work_stack.push_back({frame.cap, frame.n - 1, READ_MEMO});
+    text = "cap:" + QString::number(frame.cap) + " " +
+           "n:" + QString::number(frame.n - 1);
+    ui->STACK->append(text);
 }
 
 void Memory_knap::pushstack_2() {
     ui->output_process->setText("pushstack_2");
+    QString text = "";
     temp = ui->inputTape->item(0, inputPos)->text();
     work_stack.push_back({frame.cap, frame.n, WRITE_MAX});//合并问题
+    text = "cap:" + QString::number(frame.cap) + " " +
+           "n:" + QString::number(frame.n);
+    ui->STACK->append(text);
     work_stack.push_back({frame.cap, frame.n - 1, READ_MEMO});//不取
+    text = "cap:" + QString::number(frame.cap) + " " +
+           "n:" + QString::number(frame.n - 1);
+    ui->STACK->append(text);
     work_stack.push_back({frame.cap - temp.toInt(), frame.n - 1, READ_MEMO});//取
+    text = "cap:" + QString::number(frame.cap - temp.toInt()) + " " +
+           "n:" + QString::number(frame.n - 1);
+    ui->STACK->append(text);
 }
 
 void Memory_knap::writeMax() {
@@ -225,6 +267,23 @@ void Memory_knap::writeMax() {
     workPos = frame.n * (capacity + 1) + frame.cap;
     value_yes = std::max(value_yes, value_no);
     ui->workTape->setItem(0, workPos, new QTableWidgetItem(QString::number(value_yes)));
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
+}
+
+void Memory_knap::writeMax2() {
+    frame = {frame.cap, frame.n, END};
+    readMemo();
+    this->moveWorkTape((frame.n - 1) * (capacity + 1) + frame.cap - workPos);
+    this->start_posWorkTape = this->end_posWorkTape;
+    workPos = (frame.n - 1) * (capacity + 1) + frame.cap;
+    int value_no = ui->workTape->item(0, workPos)->text().toInt();//不取
+    this->moveWorkTape(frame.n * (capacity + 1) + frame.cap - workPos);
+    this->start_posWorkTape = this->end_posWorkTape;
+    workPos = frame.n * (capacity + 1) + frame.cap;
+    ui->workTape->setItem(0, workPos, new QTableWidgetItem(QString::number(value_no)));
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
 }
 
 void Memory_knap::readVal() {
@@ -288,4 +347,16 @@ void Memory_knap::getMax() {
     temp = ui->workTape->item(0, index)->text();
     ui->max_value->setText(temp);
 }
+
+void Memory_knap::popStack() {
+    QString text = ui->STACK->toPlainText();
+    QStringList lines = text.split('\n', QString::SkipEmptyParts);
+    lines.removeAt(lines.size() - 1);
+    text = lines.join("\n");
+    ui->STACK->setPlainText(text);
+    SPEED = ui->horizontalSlider->value();
+    delay(2000 - SPEED);
+}
+
+
 

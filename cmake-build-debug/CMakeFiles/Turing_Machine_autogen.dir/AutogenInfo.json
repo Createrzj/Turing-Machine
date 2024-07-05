@@ -83,12 +83,6 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/programing/CLionProjects/Turing Machine/BackTrack.h",
-			"MU",
-			"EWIEGA46WW/moc_BackTrack.cpp",
-			null
-		],
-		[
 			"D:/programing/CLionProjects/Turing Machine/include/BB_knap.h",
 			"MU",
 			"6YEA5652QU/moc_BB_knap.cpp",
@@ -134,6 +128,12 @@
 			"D:/programing/CLionProjects/Turing Machine/include/Recur_BinarySer.h",
 			"MU",
 			"6YEA5652QU/moc_Recur_BinarySer.cpp",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/include/dp_table.h",
+			"MU",
+			"6YEA5652QU/moc_dp_table.cpp",
 			null
 		],
 		[
@@ -212,11 +212,6 @@
 	"SETTINGS_FILE" : "D:/programing/CLionProjects/Turing Machine/cmake-build-debug/CMakeFiles/Turing_Machine_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"D:/programing/CLionProjects/Turing Machine/BackTrack.cpp",
-			"MU",
-			null
-		],
 		[ "D:/programing/CLionProjects/Turing Machine/main.cpp", "MU", null ],
 		[
 			"D:/programing/CLionProjects/Turing Machine/src/BB_knap.cpp",
@@ -250,6 +245,11 @@
 		],
 		[
 			"D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/programing/CLionProjects/Turing Machine/src/dp_table.cpp",
 			"MU",
 			null
 		],

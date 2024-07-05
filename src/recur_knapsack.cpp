@@ -24,6 +24,7 @@ recur_knapsack::recur_knapsack(QWidget *parent) :
     connect(ui->memory_knap, SIGNAL(clicked(bool)), this, SLOT(Knapsack_memory()));
     connect(ui->backtrack_knap, SIGNAL(clicked(bool)), this, SLOT(Knapsack_backtrack()));
     connect(ui->return_main, SIGNAL(clicked(bool)), this, SLOT(returnMain()));
+    connect(ui->restore, SIGNAL(clicked(bool)), this, SLOT(Restore()));
 
     ui->picture_turing->setPixmap(
             QPixmap(QString::fromUtf8("D:/programing/CLionProjects/Turing Machine/resources/turing_machine.png")));
@@ -165,4 +166,47 @@ void recur_knapsack::returnMain() {
 //    Restore();
     emit Show_Father_Widget();
     this->close();
+}
+
+void recur_knapsack::Restore() {
+    ui->input_Capacity->clear();
+    ui->input_Num->clear();
+    ui->input_Knap->clear();
+    ui->steps->clear();
+    ui->grids->clear();
+    ui->output_process->clear();
+    ui->STACK->clear();
+    ui->max_value->clear();
+    //还原输入纸带位置
+    Anima_input->setDuration(2000);
+    Anima_input->setStartValue(ui->inputTape->geometry().topLeft());
+    Anima_input->setEndValue(QPoint(655, 340));
+    Anima_input->start();
+    //还原工作纸带位置
+    Anima_work->setDuration(2000);
+    Anima_work->setStartValue(ui->workTape->geometry().topLeft());
+    Anima_work->setEndValue(QPoint(655, 540));
+    Anima_work->start();
+    //还原工作纸带位置
+    Anima_output->setDuration(2000);
+    Anima_output->setStartValue(ui->outputTape->geometry().topLeft());
+    Anima_output->setEndValue(QPoint(655, 730));
+    Anima_output->start();
+    //更新输入纸带
+    for (int i = 0; i < ui->inputTape->columnCount(); i++) {
+        ui->inputTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+    //更新工作纸带
+    for (int i = 0; i < ui->workTape->columnCount(); i++) {
+        ui->workTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+    //更新输出纸带
+    for (int i = 0; i < ui->outputTape->columnCount(); i++) {
+        ui->outputTape->setItem(0, i, new QTableWidgetItem(""));
+    }
+
+    ui->horizontalSlider->setValue(1000);
+
+    m_recur_knapsack.updatePara();
+    backtrack_knap.updatePara();
 }

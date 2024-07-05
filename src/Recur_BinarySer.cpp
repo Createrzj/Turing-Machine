@@ -36,7 +36,6 @@ int Recur_BinarySer::execute() {
         switch (state) {
             case READ_LOW:
                 ui->output_process->setText("READ_LOW");
-                Recur_BinarySer::delay(2000);
                 temp = ui->tape->item(0, 0)->text();
                 low = temp.toInt();
                 this->moveTape(1);
@@ -155,21 +154,24 @@ int Recur_BinarySer::execute() {
                 popStack();
                 return mid; // 查找成功
         }
-        Recur_BinarySer::delay(2000);
     }
 }
 
 void Recur_BinarySer::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    Recur_BinarySer::delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima->setDuration(2000);
+    Anima->setDuration(abs(pos) * SPEED);
     Anima->setStartValue(this->start_posTape);
     Anima->setEndValue(this->end_posTape);
     Anima->start();
 }
 
 void Recur_BinarySer::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    Recur_BinarySer::delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(2000);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
@@ -184,6 +186,7 @@ void Recur_BinarySer::delay(int milliseconds) {
 void Recur_BinarySer::Initial() {
     steps = 0;
     workSpace = 0;
+    SPEED = ui->horizontalSlider->value();
     Anima->setTargetObject(ui->tape);
     Anima->setPropertyName("pos");
 

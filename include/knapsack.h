@@ -8,6 +8,8 @@
 #include "Library.h"
 #include "DP_knap.h"
 #include "BB_knap.h"
+#include "dp_table.h"
+#include "../ui/ui_dp_table.h"
 #include "../ui/ui_knapsack.h"
 
 QT_BEGIN_NAMESPACE
@@ -22,6 +24,7 @@ public:
     ~Knapsack() override;
     DP_knap dpKnap;//0-1背包动态规划
     BB_knap bbKnap;// 0-1背包分支界限
+    DP_Table dpTable;// 打印动态规划数组表
 
 private:
     Ui::Knapsack *ui;

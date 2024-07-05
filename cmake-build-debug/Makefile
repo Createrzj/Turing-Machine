@@ -141,30 +141,6 @@ Turing_Machine_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine_autogen.dir\build.make CMakeFiles/Turing_Machine_autogen.dir/build
 .PHONY : Turing_Machine_autogen/fast
 
-BackTrack.obj: BackTrack.cpp.obj
-.PHONY : BackTrack.obj
-
-# target to build an object file
-BackTrack.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj
-.PHONY : BackTrack.cpp.obj
-
-BackTrack.i: BackTrack.cpp.i
-.PHONY : BackTrack.i
-
-# target to preprocess a source file
-BackTrack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.i
-.PHONY : BackTrack.cpp.i
-
-BackTrack.s: BackTrack.cpp.s
-.PHONY : BackTrack.s
-
-# target to generate assembly for a file
-BackTrack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/BackTrack.cpp.s
-.PHONY : BackTrack.cpp.s
-
 Turing_Machine_autogen/mocs_compilation.obj: Turing_Machine_autogen/mocs_compilation.cpp.obj
 .PHONY : Turing_Machine_autogen/mocs_compilation.obj
 
@@ -381,6 +357,30 @@ src/Recur_BinarySer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.s
 .PHONY : src/Recur_BinarySer.cpp.s
 
+src/dp_table.obj: src/dp_table.cpp.obj
+.PHONY : src/dp_table.obj
+
+# target to build an object file
+src/dp_table.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj
+.PHONY : src/dp_table.cpp.obj
+
+src/dp_table.i: src/dp_table.cpp.i
+.PHONY : src/dp_table.i
+
+# target to preprocess a source file
+src/dp_table.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.i
+.PHONY : src/dp_table.cpp.i
+
+src/dp_table.s: src/dp_table.cpp.s
+.PHONY : src/dp_table.s
+
+# target to generate assembly for a file
+src/dp_table.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Turing_Machine.dir\build.make CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.s
+.PHONY : src/dp_table.cpp.s
+
 src/knapsack.obj: src/knapsack.cpp.obj
 .PHONY : src/knapsack.obj
 
@@ -487,9 +487,6 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Turing_Machine_autogen
 	@echo ... Turing_Machine
-	@echo ... BackTrack.obj
-	@echo ... BackTrack.i
-	@echo ... BackTrack.s
 	@echo ... Turing_Machine_autogen/mocs_compilation.obj
 	@echo ... Turing_Machine_autogen/mocs_compilation.i
 	@echo ... Turing_Machine_autogen/mocs_compilation.s
@@ -517,6 +514,9 @@ help:
 	@echo ... src/Recur_BinarySer.obj
 	@echo ... src/Recur_BinarySer.i
 	@echo ... src/Recur_BinarySer.s
+	@echo ... src/dp_table.obj
+	@echo ... src/dp_table.i
+	@echo ... src/dp_table.s
 	@echo ... src/knapsack.obj
 	@echo ... src/knapsack.i
 	@echo ... src/knapsack.s

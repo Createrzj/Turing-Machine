@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -49,6 +50,7 @@ public:
     QLabel *picture_turing_3;
     QTableWidget *workTape;
     QLabel *picture_turing;
+    QSlider *horizontalSlider;
 
     void setupUi(QWidget *recur_knapsack)
     {
@@ -263,6 +265,12 @@ public:
 "border:2px solid white\n"
 "}"));
         picture_turing->setScaledContents(true);
+        horizontalSlider = new QSlider(recur_knapsack);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(770, 140, 160, 16));
+        horizontalSlider->setMaximum(2000);
+        horizontalSlider->setSliderPosition(1000);
+        horizontalSlider->setOrientation(Qt::Horizontal);
 
         retranslateUi(recur_knapsack);
 

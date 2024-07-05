@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj"
-  "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/main.cpp.obj"
@@ -19,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj.d"
+  "CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj"
+  "CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.obj"
   "CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.obj.d"
   "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj"

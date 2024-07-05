@@ -654,6 +654,28 @@ font: 12pt &quot;华文楷体&quot;;
     <string/>
    </property>
   </widget>
+  <widget class="QSlider" name="horizontalSlider">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>120</y>
+     <width>160</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>2000</number>
+   </property>
+   <property name="sliderPosition">
+    <number>1000</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::NoTicks</enum>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

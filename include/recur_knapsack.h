@@ -37,6 +37,7 @@ public slots:
     void Knapsack_memory();//备忘录
     void Knapsack_backtrack();// 回溯
     void returnMain();//返回主界面
+    void Restore();// 重置
 
 signals:
     void Show_Father_Widget();

@@ -22,9 +22,11 @@ BB_knap::BB_knap() {
     state = READ_CAPACITY;
     bestBranch = NULL;
     temp = "";
+    workspace = 0;
 }
 
 void BB_knap::updatePara() {
+    workspace = 0;
     steps = 0;
     inputPos = 0;
     workPos = 0;
@@ -50,24 +52,30 @@ void BB_knap::updatePara() {
 }
 
 void BB_knap::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima->setDuration(100);
+    Anima->setDuration(abs(pos) * SPEED);
     Anima->setStartValue(this->start_posTape);
     Anima->setEndValue(this->end_posTape);
     Anima->start();
 }
 
 void BB_knap::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(100);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
 }
 
 void BB_knap::moveOutputTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posOutputTape = QPoint(start_posOutputTape.x() - TABLEWIDGET_WIDTH * pos, start_posOutputTape.y());
-    Anima_output->setDuration(100);
+    Anima_output->setDuration(abs(pos) * SPEED);
     Anima_output->setStartValue(this->start_posOutputTape);
     Anima_output->setEndValue(this->end_posOutputTape);
     Anima_output->start();
@@ -80,6 +88,7 @@ void BB_knap::delay(int milliseconds) {
 }
 
 void BB_knap::Initial() {
+    SPEED = ui->horizontalSlider->value();
     temp = ui->input_Num->text();
     int size_work = 3 * temp.toInt();
     ui->workTape->setColumnCount(size_work);
@@ -121,36 +130,42 @@ void BB_knap::Initial() {
 float BB_knap::execute() {
     this->Initial();
     while (true) {
-        steps++;
         ui->steps->setText(QString::number(steps));
         switch (state) {
             case READ_CAPACITY:
                 ui->output_process->setText("READ_CAPACITY");
                 readCapacity();
+                steps++;
                 break;
             case READ_NUM:
                 ui->output_process->setText("READ_NUM");
                 readNum();
+                steps++;
                 break;
             case READ_WEIGHT:
                 ui->output_process->setText("READ_WEIGHT");
                 readWeight();
+                steps++;
                 break;
             case READ_VALUE:
                 ui->output_process->setText("READ_VALUE");
                 readValue();
+                steps++;
                 break;
             case WRITE_W:
                 ui->output_process->setText("WRITE_W");
                 writeWeight();
+                steps++;
                 break;
             case WRITE_V:
                 ui->output_process->setText("WRITE_V");
                 writeValue();
+                steps++;
                 break;
             case WRITE_AVER:
                 ui->output_process->setText("WRITE_AVER");
                 writeAverage();
+                steps++;
                 break;
             case SORT:
                 ui->output_process->setText("SORT");
@@ -163,6 +178,7 @@ float BB_knap::execute() {
             case MAX:
                 ui->output_process->setText("MAX");
                 maxknapsack();
+                steps++;
                 break;
             case BOND:
                 ui->output_process->setText("BOND");
@@ -171,10 +187,12 @@ float BB_knap::execute() {
             case READ_W:
                 ui->output_process->setText("READ_W");
                 readW();
+                steps++;
                 break;
             case READ_V:
                 ui->output_process->setText("READ_V");
                 readV();
+                steps++;
                 break;
             case RightTree:
                 ui->output_process->setText("RightTree");
@@ -187,17 +205,19 @@ float BB_knap::execute() {
             case READ_W_1:
                 ui->output_process->setText("READ_W_1");
                 readW1();
+                steps++;
                 break;
             case READ_V_1:
                 ui->output_process->setText("READ_V_1");
                 readV1();
+                steps++;
                 break;
             case Branch_and_bond_SUCCESS:
                 ui->output_process->setText("SUCCESS");
                 printBestBranch();
+                ui->Queue->clear();
                 return maxprofit;
         }
-        delay(100);
     }
 }
 
@@ -238,6 +258,8 @@ void BB_knap::readValue() {
 }
 
 void BB_knap::writeWeight() {
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
     this->moveWorkTape((i - 1) * 4 - workPos);
     this->start_posWorkTape = this->end_posWorkTape;
     workPos = (i - 1) * 4;
@@ -247,6 +269,8 @@ void BB_knap::writeWeight() {
 }
 
 void BB_knap::writeValue() {
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
     this->moveWorkTape(1);
     this->start_posWorkTape = this->end_posWorkTape;
     workPos++;
@@ -256,6 +280,8 @@ void BB_knap::writeValue() {
 }
 
 void BB_knap::writeAverage() {
+    workspace++;
+    ui->grids->setText(QString::number(workspace));
     this->moveWorkTape(1);
     this->start_posWorkTape = this->end_posWorkTape;
     workPos++;
@@ -286,22 +312,25 @@ void BB_knap::sort() {
         ui->workTape->setColumnWidth(i, TABLEWIDGET_WIDTH);
         ui->workTape->setItem(0, i, item);
     }
-    steps--;
     state = FIST_BUILD;
 }
 
 void BB_knap::first() {
     u = {-1, 0, 0, 0.0f, new Treenode};
     Q.push(u);
+    QString text = QString::number(u.level) + " " +
+                   QString::number(u.profit) + " " +
+                   QString::number(u.weight) + " " +
+                   QString::number(u.bound);
+    ui->Queue->append(text);
     state = MAX;
-    steps--;
 }
 
 void BB_knap::maxknapsack() {
     if (!Q.empty()) {
         u = Q.front();
         Q.pop();
-        steps++;
+        popQueue();
         if (u.level == -1)
             v.level = 0;
         if (u.level == numItems - 1) {
@@ -312,20 +341,24 @@ void BB_knap::maxknapsack() {
     } else {
         state = Branch_and_bond_SUCCESS;
     }
-    steps--;
 }
 
 void BB_knap::bond() {
     if (v.weight >= capacity)
         v.bound = 0;
-    if (j < numItems  && totweight + current_weight <= capacity) {
+    if (j < numItems && totweight + current_weight <= capacity) {
         totweight += current_weight;
         profit_bound += current_value;
         j++;
-        if(j == numItems) {
+        if (j == numItems) {
             v.bound = profit_bound;
-            if (v.bound > maxprofit){
+            if (v.bound > maxprofit) {
                 Q.push(v);
+                QString text = QString::number(v.level) + " " +
+                               QString::number(v.profit) + " " +
+                               QString::number(v.weight) + " " +
+                               QString::number(v.bound);
+                ui->Queue->append(text);
                 steps++;
             }
 
@@ -333,14 +366,18 @@ void BB_knap::bond() {
                 state = RightTree;
             else if (flag == 0)
                 state = MAX;
-        }
-        else
+        } else
             state = READ_W_1;
     } else if (j < numItems) {
         profit_bound += (capacity - totweight) * current_value / current_weight;
         v.bound = profit_bound;
-        if (v.bound > maxprofit){
+        if (v.bound > maxprofit) {
             Q.push(v);
+            QString text = QString::number(v.level) + " " +
+                           QString::number(v.profit) + " " +
+                           QString::number(v.weight) + " " +
+                           QString::number(v.bound);
+            ui->Queue->append(text);
             steps++;
         }
 
@@ -348,17 +385,22 @@ void BB_knap::bond() {
             state = RightTree;
         else if (flag == 0)
             state = MAX;
-    }
-    else {
+    } else {
         v.bound = profit_bound;
-        if (v.bound > maxprofit)
+        if (v.bound > maxprofit) {
             Q.push(v);
+            QString text = QString::number(v.level) + " " +
+                           QString::number(v.profit) + " " +
+                           QString::number(v.weight) + " " +
+                           QString::number(v.bound);
+            ui->Queue->append(text);
+            steps++;
+        }
         if (flag == 1)
             state = RightTree;
         else if (flag == 0)
             state = MAX;
     }
-    steps--;
 }
 
 void BB_knap::readW() {
@@ -389,11 +431,10 @@ void BB_knap::righttree() {
     profit_bound = v.profit;
     j = v.level + 1;
     totweight = v.weight;
-    if(j == numItems)
+    if (j == numItems)
         state = BOND;
     else
         state = READ_W_1;
-    steps--;
 }
 
 void BB_knap::lefttree() {
@@ -409,16 +450,15 @@ void BB_knap::lefttree() {
     profit_bound = v.profit;
     j = v.level + 1;
     totweight = v.weight;
-    if(j == numItems)
+    if (j == numItems)
         state = BOND;
     else
         state = READ_W_1;
-    steps--;
 }
 
 void BB_knap::readW1() {
-    qDebug()<<"readW1";
-    qDebug()<<3 * j;
+    qDebug() << "readW1";
+    qDebug() << 3 * j;
     this->moveWorkTape(3 * j - workPos);
     this->start_posWorkTape = this->end_posWorkTape;
     workPos = 3 * j;
@@ -448,3 +488,12 @@ void BB_knap::printBestBranch() {
         ui->outputTape->setItem(0, i, new QTableWidgetItem(QString::number(bestItems[i])));
     }
 }
+
+void BB_knap::popQueue() {
+    QString text = ui->Queue->toPlainText();
+    QStringList lines = text.split('\n', QString::SkipEmptyParts);
+    lines.removeAt(0);
+    text = lines.join("\n");
+    ui->Queue->setPlainText(text);
+}
+

@@ -16,28 +16,54 @@ BackTrack_knap::BackTrack_knap() {
     bestv = 0;
     cwig = 0;
     cval = 0;
+    workspace = 0;
+    work_stack.push({0,2});
+}
+
+void BackTrack_knap::updatePara() {
+    state = READ_CAPACITY;
+    temp = "";
+    capacity = 0; // 背包容量
+    numItems = 0; // 物品数量
+    steps = 0;
+    inputPos = 0;// 当前指向输入纸带的位置
+    workPos = 0;// 当前指向工作纸带的位置
+    outputPos = 0;// 当前指向输出纸带的位置
+    bestv = 0;
+    cwig = 0;
+    cval = 0;
+    workspace = 0;
+    while (!work_stack.empty()) {
+        work_stack.pop();
+    }
     work_stack.push({0,2});
 }
 
 void BackTrack_knap::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima_input->setDuration(100);
+    Anima_input->setDuration(abs(pos) * SPEED);
     Anima_input->setStartValue(this->start_posTape);
     Anima_input->setEndValue(this->end_posTape);
     Anima_input->start();
 }
 
 void BackTrack_knap::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(100);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
 }
 
 void BackTrack_knap::moveOutputTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posOutputTape = QPoint(start_posOutputTape.x() - TABLEWIDGET_WIDTH * pos, start_posOutputTape.y());
-    Anima_output->setDuration(100);
+    Anima_output->setDuration(abs(pos) * SPEED);
     Anima_output->setStartValue(this->start_posOutputTape);
     Anima_output->setEndValue(this->end_posOutputTape);
     Anima_output->start();
@@ -50,8 +76,11 @@ void BackTrack_knap::delay(int milliseconds) {
 }
 
 void BackTrack_knap::Initial() {
+    SPEED = ui->horizontalSlider->value();
     temp = ui->input_Num->text();
     int size_work = 3 + temp.toInt();
+    workspace = size_work;
+    ui->grids->setText(QString::number(workspace));
     ui->workTape->setColumnCount(size_work);
     ui->workTape->setRowHeight(0, TABLEWIDGET_HEIGHT);
     ui->workTape->setFixedWidth((size_work + 1) * TABLEWIDGET_WIDTH);
@@ -144,12 +173,8 @@ void BackTrack_knap::execute() {
                     break;
             }
         }
-        delay(500);
-        showstack();
-        showwork();
-        cout<<endl;
     }
-    updateoutput();
+    ui->max_value->setText(QString::number(bestv));
     ui->output_process->setText("SUCESS");
 }
 
@@ -172,7 +197,6 @@ void BackTrack_knap::readNum() {
 }
 
 void BackTrack_knap::judgeleaf(node current) {
-    qDebug() << "judgeleaf";
     ui->output_process->setText("judgeleaf");
     if (current.n >= numItems) {
         state =  UPDATE_BESTV;
@@ -183,7 +207,6 @@ void BackTrack_knap::judgeleaf(node current) {
 }
 
 void BackTrack_knap::updatebestv(node current) {
-    qDebug() << "updatebestv";
     ui->output_process->setText("updatebestv");
     readcval();
     readbestv();
@@ -191,7 +214,6 @@ void BackTrack_knap::updatebestv(node current) {
 
 void BackTrack_knap::readcval() {
     // 将 worktap[1] 的值赋给当前节点的 cval
-    qDebug() << "readcval";
     ui->output_process->setText("readcval");
     steps++;
     ui->steps->setText(QString::number(steps));
@@ -203,7 +225,6 @@ void BackTrack_knap::readcval() {
 }
 
 void BackTrack_knap::readbestv() {
-    qDebug() << "readbestv";
     ui->output_process->setText("readbestv");
     steps++;
     ui->steps->setText(QString::number(steps));
@@ -214,11 +235,11 @@ void BackTrack_knap::readbestv() {
         bestv = cval;
         ui->workTape->setItem(0, workPos, new QTableWidgetItem(QString::number(cval)));
         updatebestx();
+        updateoutput();
     }
 }
 
 void BackTrack_knap::updatebestx() {
-    qDebug() << "updatebestx";
     ui->output_process->setText("updatebestx");
     for (int i = 0; i < numItems; i++) {
         this->moveWorkTape(3 + i - workPos);
@@ -230,9 +251,9 @@ void BackTrack_knap::updatebestx() {
 }
 
 void BackTrack_knap::popnode(node current) {
-    qDebug() << "popnode";
     ui->output_process->setText("popnode");
     work_stack.pop();
+    popStack();
     updatexi(current.n, 2);
     if (!work_stack.empty() && work_stack.top().xi == 1) {
         readwigi(current.n - 1);
@@ -372,6 +393,8 @@ void BackTrack_knap::pushleft(node current) {
     writecwig(newWeight);
     writecval(newValue);
     work_stack.push({current.n + 1, 2});
+    QString text ="n:" + QString::number(current.n + 1);
+    ui->STACK->append(text);
 }
 
 void BackTrack_knap::writecwig(int weight) {
@@ -399,6 +422,8 @@ void BackTrack_knap::writecval(int value) {
 void BackTrack_knap::pushright(node current) {
     ui->output_process->setText("pushright");
     work_stack.push({current.n + 1, 2});
+    QString text ="n:" + QString::number(current.n + 1);
+    ui->STACK->append(text);
 }
 
 void BackTrack_knap::updateoutput() {
@@ -408,30 +433,18 @@ void BackTrack_knap::updateoutput() {
         this->start_posOutputTape = this->end_posOutputTape;
         outputPos = i;
         ui->outputTape->setItem(0, outputPos, new QTableWidgetItem(QString::number(bestx[i])));
+        steps++;
+        ui->steps->setText(QString::number(steps));
     }
 }
 
-void BackTrack_knap::showwork() {
-    for(int i=0;i<ui->workTape->columnCount();i++) {
-        temp = ui->workTape->item(0, i)->text();
-        cout<<temp.toStdString()<<" ";
-    }
-    cout<<endl;
+void BackTrack_knap::popStack() {
+    QString text = ui->STACK->toPlainText();
+    QStringList lines = text.split('\n', QString::SkipEmptyParts);
+    lines.removeAt(lines.size() - 1);
+    text = lines.join("\n");
+    ui->STACK->setPlainText(text);
+    SPEED = ui->horizontalSlider->value();
+    delay(2000 - SPEED);
 }
 
-void BackTrack_knap::showstack() {
-    stack<node> temp = work_stack;
-    node t ;
-    static int time = 0;
-    time++;
-    cout<<"time: "<<time<<endl;
-    while(!temp.empty()) {
-        t = temp.top();
-        temp.pop();
-        if(t.xi!=2)
-            cout<<" n "<<t.n<<" xi "<<t.xi<<endl;
-        else
-            cout<<" n "<<t.n<<endl;
-    }
-    cout<<"------"<<endl;
-}

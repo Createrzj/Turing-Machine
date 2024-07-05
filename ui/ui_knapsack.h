@@ -15,7 +15,10 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -47,6 +50,10 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QPushButton *BB;
+    QSlider *horizontalSlider;
+    QTextEdit *Queue;
+    QLabel *label_5;
+    QTextBrowser *textBrowser;
 
     void setupUi(QWidget *Knapsack)
     {
@@ -249,6 +256,35 @@ public:
 "{\n"
 "	font: 11pt \"\345\215\216\346\226\207\346\245\267\344\275\223\";\n"
 "}"));
+        horizontalSlider = new QSlider(Knapsack);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(820, 140, 160, 16));
+        horizontalSlider->setMaximum(2000);
+        horizontalSlider->setSliderPosition(1000);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        Queue = new QTextEdit(Knapsack);
+        Queue->setObjectName(QString::fromUtf8("Queue"));
+        Queue->setGeometry(QRect(10, 590, 281, 201));
+        Queue->setLayoutDirection(Qt::LeftToRight);
+        Queue->setStyleSheet(QString::fromUtf8("QTextEdit {\n"
+"    border-width: 0px 2px 0px 2px; /* \344\270\212\343\200\201\345\217\263\343\200\201\344\270\213\350\276\271\346\241\2061px\357\274\214\345\267\246\350\276\271\346\241\2060px */\n"
+"    border-style: solid;\n"
+"    border-color: black; /* \350\276\271\346\241\206\351\242\234\350\211\262\344\270\272\351\273\221\350\211\262 */\n"
+"	font: 12pt \"\345\256\213\344\275\223\";\n"
+"}\n"
+""));
+        label_5 = new QLabel(Knapsack);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(110, 560, 91, 21));
+        QFont font4;
+        font4.setPointSize(15);
+        font4.setBold(true);
+        font4.setWeight(75);
+        label_5->setFont(font4);
+        label_5->setAlignment(Qt::AlignCenter);
+        textBrowser = new QTextBrowser(Knapsack);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setGeometry(QRect(320, 730, 151, 61));
 
         retranslateUi(Knapsack);
 
@@ -282,7 +318,15 @@ public:
         max_value->setPlaceholderText(QCoreApplication::translate("Knapsack", "max_value", nullptr));
         label_3->setText(QCoreApplication::translate("Knapsack", "\346\234\200\345\244\247\344\273\267\345\200\274", nullptr));
         label_4->setText(QCoreApplication::translate("Knapsack", "\345\233\276\347\201\265\346\234\2720-1\350\203\214\345\214\205\351\227\256\351\242\230", nullptr));
-        BB->setText(QCoreApplication::translate("Knapsack", "\345\210\206\346\224\257\347\225\214\351\231\220", nullptr));
+        BB->setText(QCoreApplication::translate("Knapsack", "\345\210\206\346\224\257\351\231\220\347\225\214", nullptr));
+        label_5->setText(QCoreApplication::translate("Knapsack", "QUEUE", nullptr));
+        textBrowser->setHtml(QCoreApplication::translate("Knapsack", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">level,profit,</p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">weight,bound</p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
     } // retranslateUi
 
 };

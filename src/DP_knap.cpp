@@ -49,24 +49,30 @@ void DP_knap::updatePara() {
 }
 
 void DP_knap::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima->setDuration(100);
+    Anima->setDuration(abs(pos) * SPEED);
     Anima->setStartValue(this->start_posTape);
     Anima->setEndValue(this->end_posTape);
     Anima->start();
 }
 
 void DP_knap::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(100);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
 }
 
 void DP_knap::moveOutputTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posOutputTape = QPoint(start_posOutputTape.x() - TABLEWIDGET_WIDTH * pos, start_posOutputTape.y());
-    Anima_output->setDuration(100);
+    Anima_output->setDuration(abs(pos) * SPEED);
     Anima_output->setStartValue(this->start_posOutputTape);
     Anima_output->setEndValue(this->end_posOutputTape);
     Anima_output->start();
@@ -138,7 +144,6 @@ int DP_knap::execute() {
                 temp = ui->workTape->item(0, capacity)->text();
                 return temp.toInt();
         }
-        DP_knap::delay(100);
     }
 }
 
@@ -225,41 +230,45 @@ void DP_knap::writeM() {
         this->start_posWorkTape = this->end_posWorkTape;
         ui->workTape->setItem(0, index, new QTableWidgetItem(QString::number(current_value)));
         workPos = index;
+        table->Fillform(workPos % capacity - 1, workPos - ((index % capacity - 1) * (capacity + 1)),
+                        QString::number(current_value));
     } else if (index_items > 0 && index_items == numItems) {
         index = index_cap + (index_items - 1) * (capacity + 1);
         this->moveWorkTape(index - workPos);
         this->start_posWorkTape = this->end_posWorkTape;
         ui->workTape->setItem(0, index, new QTableWidgetItem("0"));
         workPos = index;
+        table->Fillform(workPos % capacity - 1, workPos - ((index % capacity - 1) * (capacity + 1)),
+                        "0");
     } else if (index_items > 0 && index_cap >= current_weight && index_items < numItems) {
         index = index_cap + (index_items - 1) * (capacity + 1);
         this->moveWorkTape(index - workPos);
         this->start_posWorkTape = this->end_posWorkTape;
         ui->workTape->setItem(0, index, new QTableWidgetItem(QString::number(MAX)));
         workPos = index;
+        table->Fillform(workPos % capacity - 1, workPos - ((index % capacity - 1) * (capacity + 1)),
+                        QString::number(MAX));
     } else if (index_items > 0 && index_items < numItems) {
         index = index_cap + (index_items - 1) * (capacity + 1);
         this->moveWorkTape(index - workPos);
         this->start_posWorkTape = this->end_posWorkTape;
         ui->workTape->setItem(0, index, new QTableWidgetItem(ui->workTape->item(0, workPos)->text()));
         workPos = index;
+        table->Fillform(workPos % capacity - 1, workPos - ((index % capacity - 1) * (capacity + 1)),
+                        ui->workTape->item(0, workPos)->text());
     }
     if (index_cap > 0 && index_items == numItems) {
         index_cap--;
-        delay(100);
         state = WRITE_M;
     } else if (index_cap > 0) {
         index_cap--;
-        delay(100);
         state = READ_M;
     } else {
         index_items--;
         index_cap = capacity;
-        delay(100);
         state = READ_WEIGHT;
     }
     if (index_items == 0) {
-        delay(100);
         this->moveWorkTape(capacity - workPos);
         this->start_posWorkTape = this->end_posWorkTape;
         workPos = capacity;
@@ -296,19 +305,14 @@ void DP_knap::readAns() {
 }
 
 void DP_knap::compareAns() {
-    qDebug()<<workPos;
-    qDebug()<<current_flag;
     int temp1 = ui->workTape->item(0, workPos)->text().toInt();
     int temp2 = ui->workTape->item(0, current_flag)->text().toInt();
     this->moveWorkTape(current_flag - workPos);
     this->start_posWorkTape = this->end_posWorkTape;
     workPos = current_flag;
     if (temp1 == temp2) {
-        qDebug() << "flag=0";
         flag = 0;
-    }
-    else{
-        qDebug() << "flag=1";
+    } else {
         flag = 1;
     }
 
@@ -317,7 +321,6 @@ void DP_knap::compareAns() {
 
 void DP_knap::getresult() {
     if (index_items == numItems - 1) {
-        qDebug()<<"我进来了";
         if (ui->workTape->item(0, workPos)->text().toInt() != 0) {
             ui->outputTape->setItem(0, index_items, new QTableWidgetItem("1"));
         } else
@@ -329,6 +332,7 @@ void DP_knap::getresult() {
 }
 
 void DP_knap::Initial() {
+    SPEED = ui->horizontalSlider->value();
     temp = ui->input_Num->text();
     int size_output = temp.toInt();
     ui->workTape->setColumnCount(size_output);
@@ -342,7 +346,7 @@ void DP_knap::Initial() {
     }
 
     temp = ui->input_Capacity->text();
-    int size_work = (temp.toInt()+1) * size_output;
+    int size_work = (temp.toInt() + 1) * size_output;
     ui->workTape->setColumnCount(size_work);
     ui->workTape->setRowHeight(0, TABLEWIDGET_HEIGHT);
     ui->workTape->setFixedWidth((size_work + 1) * TABLEWIDGET_WIDTH);

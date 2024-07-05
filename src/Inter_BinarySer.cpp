@@ -159,21 +159,25 @@ int Inter_BinarySer::execute() {
                 state = COMPARE_LOW;
                 break;
         }
-        Inter_BinarySer::delay(2000);
+
     }
 }
 
 void Inter_BinarySer::moveTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posTape = QPoint(start_posTape.x() - TABLEWIDGET_WIDTH * pos, start_posTape.y());
-    Anima->setDuration(2000);
+    Anima->setDuration(abs(pos) * SPEED);
     Anima->setStartValue(this->start_posTape);
     Anima->setEndValue(this->end_posTape);
     Anima->start();
 }
 
 void Inter_BinarySer::moveWorkTape(int pos) {
+    SPEED = 2000 - ui->horizontalSlider->value();
+    delay(SPEED);
     this->end_posWorkTape = QPoint(start_posWorkTape.x() - TABLEWIDGET_WIDTH * pos, start_posWorkTape.y());
-    Anima_work->setDuration(2000);
+    Anima_work->setDuration(abs(pos) * SPEED);
     Anima_work->setStartValue(this->start_posWorkTape);
     Anima_work->setEndValue(this->end_posWorkTape);
     Anima_work->start();
@@ -188,6 +192,7 @@ void Inter_BinarySer::delay(int milliseconds) {
 void Inter_BinarySer::Initial() {
     steps = 0;
     workSpace = 0;
+    SPEED = ui->horizontalSlider->value();
     Anima->setTargetObject(ui->tape);
     Anima->setPropertyName("pos");
 

@@ -34,6 +34,7 @@ private:
     int workSpace;// 工作纸带运行空间
     int target;// 目标数字
     State state;// 运行状态
+    int SPEED;
     QPropertyAnimation *Anima = new QPropertyAnimation;
     QPoint start_posTape;// 输入纸带运动起始位置
     QPoint end_posTape;// 输入纸带运动终止位置

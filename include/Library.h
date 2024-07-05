@@ -23,6 +23,7 @@
 #include <stack>
 #include <queue>
 #include <algorithm>
+#include <math.h>
 
 #define TABLEWIDGET_WIDTH 60
 #define TABLEWIDGET_HEIGHT 50

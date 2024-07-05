@@ -181,6 +181,8 @@ void Turing::Restore() {
         ui->tape->setItem(0, i, new QTableWidgetItem(""));
     }
 
+    ui->horizontalSlider->setValue(1000);
+
     Turing_BinarySer.updatePara();
     Recyrsive_BinarySer.updatePara();
 }

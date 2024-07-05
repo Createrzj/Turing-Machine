@@ -248,26 +248,11 @@ CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.s"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\BB_knap.cpp" -o CMakeFiles\Turing_Machine.dir\src\BB_knap.cpp.s
 
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/BackTrack.cpp
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj -MF CMakeFiles\Turing_Machine.dir\BackTrack.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\BackTrack.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\BackTrack.cpp"
-
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/BackTrack.cpp.i"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\BackTrack.cpp" > CMakeFiles\Turing_Machine.dir\BackTrack.cpp.i
-
-CMakeFiles/Turing_Machine.dir/BackTrack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/BackTrack.cpp.s"
-	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\BackTrack.cpp" -o CMakeFiles\Turing_Machine.dir\BackTrack.cpp.s
-
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/BackTrack_knap.cpp
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\BackTrack_knap.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\BackTrack_knap.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\BackTrack_knap.cpp"
 
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.i: cmake_force
@@ -277,6 +262,21 @@ CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.i: cmake_force
 CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.s"
 	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\BackTrack_knap.cpp" -o CMakeFiles\Turing_Machine.dir\src\BackTrack_knap.cpp.s
+
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj: CMakeFiles/Turing_Machine.dir/flags.make
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj: CMakeFiles/Turing_Machine.dir/includes_CXX.rsp
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj: D:/programing/CLionProjects/Turing\ Machine/src/dp_table.cpp
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj: CMakeFiles/Turing_Machine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\programing\CLionProjects\Turing Machine\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj -MF CMakeFiles\Turing_Machine.dir\src\dp_table.cpp.obj.d -o CMakeFiles\Turing_Machine.dir\src\dp_table.cpp.obj -c "D:\programing\CLionProjects\Turing Machine\src\dp_table.cpp"
+
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.i"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\programing\CLionProjects\Turing Machine\src\dp_table.cpp" > CMakeFiles\Turing_Machine.dir\src\dp_table.cpp.i
+
+CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.s"
+	D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\programing\CLionProjects\Turing Machine\src\dp_table.cpp" -o CMakeFiles\Turing_Machine.dir\src\dp_table.cpp.s
 
 # Object files for target Turing_Machine
 Turing_Machine_OBJECTS = \
@@ -292,8 +292,8 @@ Turing_Machine_OBJECTS = \
 "CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj" \
 "CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.obj" \
 "CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj" \
-"CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj" \
-"CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj"
+"CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj" \
+"CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj"
 
 # External object files for target Turing_Machine
 Turing_Machine_EXTERNAL_OBJECTS =
@@ -310,8 +310,8 @@ Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/DP_knap.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj
-Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/BackTrack_knap.cpp.obj
+Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj
 Turing_Machine.exe: CMakeFiles/Turing_Machine.dir/build.make
 Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 Turing_Machine.exe: D:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Gui.a

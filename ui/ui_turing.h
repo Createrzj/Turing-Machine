@@ -15,6 +15,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -48,6 +49,7 @@ public:
     QLineEdit *input_tape_line;
     QLineEdit *work_tape_line;
     QLineEdit *output_tape_line;
+    QSlider *horizontalSlider;
 
     void setupUi(QWidget *Turing)
     {
@@ -271,6 +273,13 @@ public:
 "\n"
 "}"));
         output_tape_line->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        horizontalSlider = new QSlider(Turing);
+        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        horizontalSlider->setGeometry(QRect(730, 120, 160, 16));
+        horizontalSlider->setMaximum(2000);
+        horizontalSlider->setSliderPosition(1000);
+        horizontalSlider->setOrientation(Qt::Horizontal);
+        horizontalSlider->setTickPosition(QSlider::NoTicks);
 
         retranslateUi(Turing);
 

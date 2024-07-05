@@ -56,6 +56,7 @@ public:
     void moveOutputTape(int pos);// 移动输出纸带
     static void delay(int milliseconds);//延时函数
     void Initial();//初始化
+    void popQueue();//队列弹出
 
 private:
     enum Branch_and_bondState {
@@ -82,6 +83,8 @@ private:
     QString temp;
     Branch_and_bondState state;// 当前状态
     Treenode* bestBranch; // 指向最优分支的指针
+    int SPEED;
+    int workspace;
 
     QPropertyAnimation *Anima = new QPropertyAnimation;
     QPoint start_posTape;// 输入纸带运动起始位置

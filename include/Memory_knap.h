@@ -37,11 +37,14 @@ public:
     void moveOutputTape(int pos);// 移动输出纸带
     static void delay(int milliseconds);//延时函数
     void Initial();//初始化
+    void updatePara();
+    void writeMax2();
+    void popStack();
 
 private:
     enum KnapsackState {
         READ_CAPACITY, READ_NUM, READ_MEMO, COMPRAE_WIG,
-        PUSH_STACK_1, PUSH_STACK_2, WRITE_MAX, END
+        PUSH_STACK_1, PUSH_STACK_2, WRITE_MAX, WRITE_MAX2, END
     };
     typedef struct {
         int cap;
@@ -59,7 +62,7 @@ private:
     int inputPos;// 当前指向输入纸带的位置
     int workPos;// 当前指向工作纸带的位置
     int outputPos;// 当前指向输出纸带的位置
-
+    int SPEED;
 
     QPropertyAnimation *Anima_input = new QPropertyAnimation;
     QPoint start_posTape;// 输入纸带运动起始位置

@@ -33,6 +33,7 @@ private:
     int workSpace;// 工作纸带运行空间
     int target;// 目标数字
     State state;// 运行状态
+    int SPEED;
     QStack<QString> Stack;//递归栈
     QPropertyAnimation *Anima = new QPropertyAnimation;
     QPoint start_posTape;// 输入纸带运动起始位置

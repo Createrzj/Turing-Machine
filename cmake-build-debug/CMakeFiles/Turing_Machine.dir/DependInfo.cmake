@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/programing/CLionProjects/Turing Machine/BackTrack.cpp" "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/BackTrack.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/cmake-build-debug/Turing_Machine_autogen/mocs_compilation.cpp" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/Turing_Machine_autogen/mocs_compilation.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/main.cpp" "CMakeFiles/Turing_Machine.dir/main.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/main.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/BB_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/BB_knap.cpp.obj.d"
@@ -18,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/programing/CLionProjects/Turing Machine/src/Memory_knap.cpp" "CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/Memory_knap.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/QuickSort.cpp" "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/QuickSort.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/Recur_BinarySer.cpp" "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/Recur_BinarySer.cpp.obj.d"
+  "D:/programing/CLionProjects/Turing Machine/src/dp_table.cpp" "CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/dp_table.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/knapsack.cpp" "CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/knapsack.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/main_interface.cpp" "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/main_interface.cpp.obj.d"
   "D:/programing/CLionProjects/Turing Machine/src/recur_knapsack.cpp" "CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.obj" "gcc" "CMakeFiles/Turing_Machine.dir/src/recur_knapsack.cpp.obj.d"

@@ -23,11 +23,7 @@ public:
 
     void readCapacity();
     void readNum();
-
-    void initwork(vector<int> weight,vector<int>value,int cap);
-
     void showinput();
-    void TuringStart();
 
     void pushleft(node current);
     void pushright(node current);
@@ -54,14 +50,13 @@ public:
     void judgevis(node current);
     bool compcap(node current);
 
-    void showstack();
-    void showwork();
-
     void moveTape(int pos);// 移动输入纸带
     void moveWorkTape(int pos);// 移动工作纸带
     void moveOutputTape(int pos);// 移动输出纸带
     static void delay(int milliseconds);//延时函数
     void Initial();//初始化
+    void updatePara();
+    void popStack();
 
 private:
     int capacity; // 背包容量
@@ -80,6 +75,8 @@ private:
     int bestv;
     int cwig;
     int cval;
+    int SPEED;
+    int workspace;
 
     vector<int> bestx;
     stack<node> work_stack;

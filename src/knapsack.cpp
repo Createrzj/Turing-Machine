@@ -13,6 +13,7 @@ Knapsack::Knapsack(QWidget *parent) :
     this->Numbers = QStringList();
     dpKnap.ui = ui;
     bbKnap.ui = ui;
+    dpKnap.table = &dpTable;
     Anima->setTargetObject(ui->inputTape);
     Anima->setPropertyName("pos");
     Anima1->setTargetObject(ui->workTape);
@@ -81,6 +82,8 @@ void Knapsack::Knapsack_DP() {
     this->Numbers.clear();
     this->GetInput();
     this->initTape();
+    dpTable.show();
+    dpTable.Initial(Numbers[1].toInt(), Numbers[0].toInt() + 1);
     int result = dpKnap.execute();
     ui->max_value->setText(QString::number(result));
 }
@@ -109,15 +112,15 @@ void Knapsack::GetInput() {
     Numbers.append(ui->input_Capacity->text());
     Numbers.append(ui->input_Num->text());
     QStringList temp = ui->input_Knap->text().split("，", QString::SkipEmptyParts);
-    foreach(const QString &number, temp) {
-        Numbers.append(number);
-    }
+            foreach(const QString &number, temp) {
+            Numbers.append(number);
+        }
 }
 
 void Knapsack::initTape() {
     int size_input = this->Numbers.size();
     int size_output = Numbers[1].toInt();
-    int size_work = (Numbers[0].toInt() + 1) *size_output;
+    int size_work = (Numbers[0].toInt() + 1) * size_output;
 
     ui->inputTape->setColumnCount(size_input);
     ui->inputTape->setRowHeight(0, TABLEWIDGET_HEIGHT);
@@ -193,6 +196,10 @@ void Knapsack::Restore() {
         ui->outputTape->setItem(0, i, new QTableWidgetItem(""));
     }
 
+    ui->horizontalSlider->setValue(1000);
+
+    dpTable.close();
+    ui->Queue->clear();
     dpKnap.updatePara();
     bbKnap.updatePara();
 }

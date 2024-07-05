@@ -7,10 +7,12 @@
 
 #include "Library.h"
 #include "../ui/ui_knapsack.h"
+#include "dp_table.h"
 
 class DP_knap {
 public:
     Ui::Knapsack *ui{};
+    DP_Table *table;
     DP_knap();
     void updatePara();// 重复运行初始化参数
     int execute();
@@ -52,6 +54,7 @@ private:
     int L1,L2,MAX;//用于比较两个值大小
     int flag;// 回溯时判断是否加入背包
     int workspace;// 工作纸带空间
+    int SPEED;
 
     QPropertyAnimation *Anima = new QPropertyAnimation;
     QPoint start_posTape;// 输入纸带运动起始位置
